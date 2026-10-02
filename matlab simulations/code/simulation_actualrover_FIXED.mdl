@@ -46,8 +46,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2026-08-27T08:04:00Z</dcterms:created>
   <dc:creator>Asus</dc:creator>
   <cp:lastModifiedBy>rihaa</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-10-01T22:11:55Z</dcterms:modified>
-  <cp:revision>1.266</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-10-02T12:26:39Z</dcterms:modified>
+  <cp:revision>1.267</cp:revision>
   <cp:version>R2026a</cp:version>
 </cp:coreProperties>
 
@@ -1392,7 +1392,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.266&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.267&gt;</P>
     </ConfigManagerSettings>
     <SimulationSettings>
       <P Name="SimulationMode">normal</P>
@@ -1431,10 +1431,10 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
     <P Name="CurrentDlgPage" Class="char">Solver</P>
     <P Name="ConfigPrmDlgPosition" Class="double">[71.0, 71.0, 900.0, 710.0]</P>
     <P Name="Version" Class="char">26.0.0</P>
-    <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="10*1">
+    <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="11*1">
       <Object ObjectID="2" ClassName="Simulink.SolverCC">
         <P Name="StopTime" Class="char">150</P>
-        <P Name="SolverName" Class="char">ode15s</P>
+        <P Name="SolverName" Class="char">FixedStepAuto</P>
         <P Name="SolverInfoToggleStatus" Class="char">on</P>
         <P Name="ODENIntegrationMethod" Class="char">ode3</P>
         <P Name="Version" Class="char">26.0.0</P>
@@ -1443,143 +1443,123 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="Version" Class="char">26.0.0</P>
       </Object>
       <Object ObjectID="4" ClassName="Simulink.OptimizationCC">
+        <P Name="DefaultParameterBehavior" Class="char">Inlined</P>
+        <P Name="EnhancedBackFolding" Class="char">on</P>
+        <P Name="PassReuseOutputArgsAs" Class="char">Individual arguments</P>
+        <P Name="ZeroExternalMemoryAtStartup" Class="char">off</P>
+        <P Name="ZeroInternalMemoryAtStartup" Class="char">off</P>
+        <P Name="MaxStackSize" Class="char">64</P>
+        <P Name="OptimizeBlockOrder" Class="char">speed</P>
+        <P Name="DifferentSizesBufferReuse" Class="char">on</P>
+        <P Name="OptimizationCustomize" Class="char">off</P>
+        <P Name="EfficientTunableParamExpr" Class="char">on</P>
         <P Name="Version" Class="char">26.0.0</P>
-        <Array PropName="DisabledProps" Type="Cell" Dimension="1*10">
-          <Cell Class="char">BooleansAsBitfields</Cell>
-          <Cell Class="char">PassReuseOutputArgsAs</Cell>
-          <Cell Class="char">PassReuseOutputArgsThreshold</Cell>
-          <Cell Class="char">ZeroExternalMemoryAtStartup</Cell>
-          <Cell Class="char">ZeroInternalMemoryAtStartup</Cell>
-          <Cell Class="char">OptimizeModelRefInitCode</Cell>
-          <Cell Class="char">NoFixptDivByZeroProtection</Cell>
-          <Cell Class="char">UseSpecifiedMinMax</Cell>
-          <Cell Class="char">EfficientTunableParamExpr</Cell>
-          <Cell Class="char">RemoveLocalVariableInitialization</Cell>
-        </Array>
       </Object>
       <Object ObjectID="5" ClassName="Simulink.DebuggingCC">
+        <P Name="ParameterTunabilityLossMsg" Class="char">error</P>
         <P Name="Version" Class="char">26.0.0</P>
-        <Array PropName="DisabledProps" Type="Cell" Dimension="1*1">
-          <Cell Class="char">UseOnlyExistingSharedCode</Cell>
-        </Array>
       </Object>
       <Object ObjectID="6" ClassName="Simulink.HardwareCC">
+        <P Name="UseEmbeddedCoderFeatures" Class="char">off</P>
         <P Name="Version" Class="char">26.0.0</P>
       </Object>
       <Object ObjectID="7" ClassName="Simulink.ModelReferenceCC">
         <P Name="Version" Class="char">26.0.0</P>
       </Object>
       <Object ObjectID="8" ClassName="Simulink.SFSimCC">
+        <P Name="MATLABDynamicMemAlloc" Class="char">off</P>
         <P Name="CustomCodeFunctionArrayLayout" Class="double">[]</P>
         <P Name="Version" Class="char">26.0.0</P>
       </Object>
       <Object ObjectID="9" ClassName="Simulink.RTWCC">
-        <P Name="SystemTargetFile" Class="char">grt.tlc</P>
-        <P Name="HardwareBoard" Class="char">None</P>
-        <P Name="Toolchain" Class="char">Automatically locate an installed toolchain</P>
+        <P Name="SystemTargetFile" Class="char">ert.tlc</P>
+        <P Name="HardwareBoard" Class="char">Robot Operating System 2 (ROS 2)</P>
+        <P Name="TLCOptions" Class="char">-aInlineSetEventsForThisBaseRateFcn=TLC_FALSE -aSuppressMultiTaskScheduler=TLC_FALSE  -aRateBasedStepFcn=0</P>
+        <P Name="TemplateMakefile" Class="char">ert_default_tmf</P>
+        <P Name="PostCodeGenCommand" Class="char">codertarget.postCodeGenHookCommand(h)</P>
+        <Array PropName="RTWBuildHooks" Type="Struct" Dimension="1*1">
+          <MATStruct>
+            <Field Name="className" Class="char">codertarget.tools.BuildHook</Field>
+            <Array PropName="argsAllComponents" Type="Cell" Dimension="0*0"/>
+            <Field Name="argsTopModelOnly" Class="double">[]</Field>
+            <Field Name="excludedModels" Class="double">[]</Field>
+            <Field Name="includeReferencedModels" Class="char">on</Field>
+            <Field Name="includeTopModel" Class="char">on</Field>
+            <Field Name="enabled" Class="char">on</Field>
+          </MATStruct>
+        </Array>
+        <P Name="Toolchain" Class="char">Colcon Tools</P>
         <P Name="BuildConfiguration" Class="char">Faster Builds</P>
-        <P Name="Description" Class="char">Generic Real-Time Target</P>
+        <P Name="TargetLang" Class="char">C++</P>
+        <P Name="Description" Class="char">Embedded Coder</P>
         <P Name="Version" Class="char">26.0.0</P>
         <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="2*1">
           <Object ObjectID="10" ClassName="Simulink.CodeAppCC">
+            <P Name="ForceParamTrailComments" Class="char">on</P>
+            <P Name="IgnoreCustomStorageClasses" Class="char">off</P>
+            <P Name="ShowEliminatedStatement" Class="char">on</P>
+            <P Name="OperatorAnnotations" Class="char">on</P>
+            <P Name="SimulinkDataObjDesc" Class="char">on</P>
+            <P Name="SFDataObjDesc" Class="char">on</P>
+            <P Name="InsertBlockDesc" Class="char">on</P>
             <P Name="Version" Class="char">26.0.0</P>
-            <Array PropName="DisabledProps" Type="Cell" Dimension="1*29">
-              <Cell Class="char">IgnoreCustomStorageClasses</Cell>
-              <Cell Class="char">IgnoreTestpoints</Cell>
-              <Cell Class="char">BlockCommentType</Cell>
-              <Cell Class="char">InsertBlockDesc</Cell>
-              <Cell Class="char">InsertPolySpaceComments</Cell>
-              <Cell Class="char">SFDataObjDesc</Cell>
-              <Cell Class="char">MATLABFcnDesc</Cell>
-              <Cell Class="char">SimulinkDataObjDesc</Cell>
-              <Cell Class="char">DefineNamingRule</Cell>
-              <Cell Class="char">SignalNamingRule</Cell>
-              <Cell Class="char">ParamNamingRule</Cell>
-              <Cell Class="char">InternalIdentifier</Cell>
-              <Cell Class="char">InlinedPrmAccess</Cell>
-              <Cell Class="char">CustomSymbolStr</Cell>
-              <Cell Class="char">CustomSymbolStrGlobalVar</Cell>
-              <Cell Class="char">CustomSymbolStrType</Cell>
-              <Cell Class="char">CustomSymbolStrField</Cell>
-              <Cell Class="char">CustomSymbolStrFcn</Cell>
-              <Cell Class="char">CustomSymbolStrModelFcn</Cell>
-              <Cell Class="char">CustomSymbolStrFcnArg</Cell>
-              <Cell Class="char">CustomSymbolStrBlkIO</Cell>
-              <Cell Class="char">CustomSymbolStrTmpVar</Cell>
-              <Cell Class="char">CustomSymbolStrMacro</Cell>
-              <Cell Class="char">CustomSymbolStrUtil</Cell>
-              <Cell Class="char">CustomSymbolStrEmxType</Cell>
-              <Cell Class="char">CustomSymbolStrEmxFcn</Cell>
-              <Cell Class="char">CustomUserTokenString</Cell>
-              <Cell Class="char">ReqsInCode</Cell>
-              <Cell Class="char">AnnotationsInComments</Cell>
-            </Array>
           </Object>
-          <Object ObjectID="11" ClassName="Simulink.GRTTargetCC">
-            <P Name="MultiwordLength" Class="double">2048.0</P>
+          <Object ObjectID="11" ClassName="Simulink.ERTTargetCC">
+            <P Name="ExtModeTransport" Class="double">2.0</P>
+            <P Name="ExtModeStaticAlloc" Class="char">on</P>
+            <P Name="ExtModeMexFile" Class="char">ext_xcp</P>
+            <P Name="ExtModeIntrfLevel" Class="char">Level2 - Open</P>
+            <P Name="RootIOFormat" Class="char">Structure reference</P>
+            <P Name="ERTCustomFileTemplate" Class="char">codertarget_file_process.tlc</P>
+            <P Name="ConvertIfToSwitch" Class="char">on</P>
+            <P Name="SuppressUnreachableDefaultCases" Class="char">on</P>
+            <P Name="TargetLangStandard" Class="char">C89/C90 (ANSI)</P>
+            <P Name="MultiwordLength" Class="double">256.0</P>
             <P Name="GenerateSampleERTMain" Class="char">off</P>
             <P Name="ModelReferenceCompliant" Class="char">on</P>
             <P Name="ParMdlRefBuildCompliant" Class="char">on</P>
             <P Name="CompOptLevelCompliant" Class="char">on</P>
             <P Name="ConcurrentExecutionCompliant" Class="char">on</P>
             <P Name="CombineOutputUpdateFcns" Class="char">on</P>
-            <P Name="ERTCustomFileBanners" Class="char">off</P>
-            <P Name="MatFileLogging" Class="char">on</P>
+            <P Name="ERTCustomFileBanners" Class="char">on</P>
+            <P Name="MatFileLogging" Class="char">off</P>
+            <P Name="CodeInterfacePackaging" Class="char">C++ class</P>
             <P Name="SupportNonFinite" Class="char">on</P>
-            <P Name="SupportContinuousTime" Class="char">on</P>
+            <P Name="SupportContinuousTime" Class="char">off</P>
             <P Name="SupportNonInlinedSFcns" Class="char">on</P>
-            <P Name="MATLABClassNameForMDSCustomization" Class="char">Simulink.SoftwareTarget.GRTCustomization</P>
-            <P Name="ModelStepFunctionPrototypeControlCompliant" Class="char">off</P>
+            <P Name="RemoveResetFunc" Class="char">on</P>
+            <P Name="MATLABClassNameForMDSCustomization" Class="char">Simulink.SoftwareTarget.ERTCustomization</P>
+            <P Name="ModelStepFunctionPrototypeControlCompliant" Class="char">on</P>
             <P Name="CPPClassGenCompliant" Class="char">on</P>
             <P Name="GRTInterface" Class="char">off</P>
             <P Name="GenerateAllocFcn" Class="char">off</P>
             <P Name="UseToolchainInfoCompliant" Class="char">on</P>
             <P Name="Version" Class="char">26.0.0</P>
-            <Array PropName="DisabledProps" Type="Cell" Dimension="1*19">
-              <Cell Class="char">IncludeMdlTerminateFcn</Cell>
-              <Cell Class="char">SuppressErrorStatus</Cell>
-              <Cell Class="char">ERTCustomFileBanners</Cell>
-              <Cell Class="char">GenerateSampleERTMain</Cell>
-              <Cell Class="char">ExistingSharedCode</Cell>
-              <Cell Class="char">GenerateTestInterfaces</Cell>
-              <Cell Class="char">ModelStepFunctionPrototypeControlCompliant</Cell>
-              <Cell Class="char">GenerateAllocFcn</Cell>
-              <Cell Class="char">PurelyIntegerCode</Cell>
-              <Cell Class="char">SupportComplex</Cell>
-              <Cell Class="char">SupportAbsoluteTime</Cell>
-              <Cell Class="char">SupportContinuousTime</Cell>
-              <Cell Class="char">SupportNonInlinedSFcns</Cell>
-              <Cell Class="char">ParenthesesLevel</Cell>
-              <Cell Class="char">ERTMultiwordTypeDef</Cell>
-              <Cell Class="char">MultiwordTypeDef</Cell>
-              <Cell Class="char">RemoveDisableFunc</Cell>
-              <Cell Class="char">RemoveResetFunc</Cell>
-              <Cell Class="char">PreserveStateflowLocalDataDimensions</Cell>
+            <Object PropName="Components" ObjectID="12" ClassName="Simulink.CPPComponent">
+              <P Name="GenerateDestructor" Class="char">on</P>
+              <P Name="ExternalIOMemberVisibility" Class="char">private</P>
+              <P Name="GenerateExternalIOAccessMethods" Class="char">Inlined structure-based method</P>
+              <P Name="ParameterMemberVisibility" Class="char">private</P>
+              <P Name="InternalMemberVisibility" Class="char">private</P>
+              <P Name="GenerateParameterAccessMethods" Class="char">None</P>
+              <P Name="GenerateInternalMemberAccessMethods" Class="char">None</P>
+              <P Name="UseOperatorNewForModelRefRegistration" Class="char">off</P>
+              <P Name="IncludeModelTypesInModelClass" Class="char">off</P>
+              <P Name="Version" Class="char">26.0.0</P>
+            </Object>
+            <Array PropName="DisabledProps" Type="Cell" Dimension="1*3">
+              <Cell Class="char">ERTFilePackagingFormat</Cell>
+              <Cell Class="char">GRTInterface</Cell>
+              <Cell Class="char">CombineOutputUpdateFcns</Cell>
             </Array>
           </Object>
         </Array>
-        <Array PropName="DisabledProps" Type="Cell" Dimension="1*18">
-          <Cell Class="char">DataTypeReplacement</Cell>
-          <Cell Class="char">IncludeHyperlinkInReport</Cell>
-          <Cell Class="char">GenerateTraceInfo</Cell>
-          <Cell Class="char">HalideCodeGeneration</Cell>
-          <Cell Class="char">GenerateTraceReport</Cell>
-          <Cell Class="char">GenerateTraceReportSl</Cell>
-          <Cell Class="char">GenerateTraceReportSf</Cell>
-          <Cell Class="char">GenerateTraceReportEml</Cell>
-          <Cell Class="char">PortableWordSizes</Cell>
-          <Cell Class="char">GenerateWebview</Cell>
-          <Cell Class="char">GenerateCodeMetricsReport</Cell>
-          <Cell Class="char">GenerateCodeReplacementReport</Cell>
-          <Cell Class="char">GenerateMissedCodeReplacementReport</Cell>
-          <Cell Class="char">GenerateErtSFunction</Cell>
-          <Cell Class="char">CreateSILPILBlock</Cell>
-          <Cell Class="char">CodeProfilingInstrumentation</Cell>
-          <Cell Class="char">CodeStackProfiling</Cell>
-          <Cell Class="char">EmbeddedCoderDictionary</Cell>
+        <Array PropName="DisabledProps" Type="Cell" Dimension="1*2">
+          <Cell Class="char">TargetLang</Cell>
+          <Cell Class="char">PackageGeneratedCodeAndArtifacts</Cell>
         </Array>
       </Object>
-      <Object ObjectID="12" ClassName="SlCovCC.ConfigComp">
+      <Object ObjectID="13" ClassName="SlCovCC.ConfigComp">
         <P Name="CovEnable" Class="char">off</P>
         <P Name="CovScope" Class="char">EntireSystem</P>
         <P Name="CovIncludeTopModel" Class="char">on</P>
@@ -1587,7 +1567,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="Description" Class="char">Simulink Coverage Configuration Component</P>
         <P Name="Version" Class="char">26.0.0</P>
       </Object>
-      <Object ObjectID="13" ClassName="SSC.SimscapeCC">
+      <Object ObjectID="14" ClassName="SSC.SimscapeCC">
         <P Name="EditingMode" Class="char">Full</P>
         <P Name="ExplicitSolverDiagnosticOptions" Class="char">warning</P>
         <P Name="GlobalZcOffDiagnosticOptions" Class="char">warning</P>
@@ -1610,10 +1590,10 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SimscapeMultithreadedCompilation" Class="char">on</P>
         <P Name="SelectedTab" Class="char"/>
         <P Name="Version" Class="char">26.0.0</P>
-        <Object PropName="Components" ObjectID="14" ClassName="simmechanics.ConfigurationSet">
+        <Object PropName="Components" ObjectID="15" ClassName="simmechanics.ConfigurationSet">
           <P Name="Version" Class="char">26.0.0</P>
           <Array PropName="Components" Type="Simulink.CustomCC" Dimension="2*1">
-            <Object ObjectID="15" ClassName="simmechanics.DiagnosticsConfigSet">
+            <Object ObjectID="16" ClassName="simmechanics.DiagnosticsConfigSet">
               <P Name="SimMechanicsInvalidVisualProperty" Class="char">warning</P>
               <P Name="SimMechanicsCrossSectionNullEdge" Class="char">warning</P>
               <P Name="SimMechanicsUnconnectedFramePorts" Class="char">warning</P>
@@ -1625,7 +1605,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
               <P Name="SimMechanicsJointTargetOverSpecification" Class="char">error</P>
               <P Name="Version" Class="char">26.0.0</P>
             </Object>
-            <Object ObjectID="16" ClassName="simmechanics.ExplorerConfigSet">
+            <Object ObjectID="17" ClassName="simmechanics.ExplorerConfigSet">
               <P Name="SimMechanicsOpenEditorOnUpdate" Class="char">on</P>
               <P Name="InternalSimMechanicsExplorerSettings" Class="char">
 &lt;ExplorerConfiguration&gt;
@@ -1703,6 +1683,136 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
             </Object>
           </Array>
         </Object>
+      </Object>
+      <Object ObjectID="18" ClassName="CoderTarget.SettingsController">
+        <Array PropName="CoderTargetData" Type="Struct" Dimension="1*1">
+          <MATStruct>
+            <Field Name="UseCoderTarget" Class="logical">1</Field>
+            <Field Name="TargetHardware" Class="char">Robot Operating System 2 (ROS 2)</Field>
+            <Array PropName="ConnectionInfo" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Array PropName="XCPonTCPIP" Type="Struct" Dimension="1*1">
+                  <MATStruct>
+                    <Field Name="IPAddress" Class="char">ros.codertarget.internal.getExtmodeDeviceAddress(hCS)</Field>
+                    <Field Name="Port" Class="char">17725</Field>
+                    <Field Name="Verbose" Class="logical">0</Field>
+                  </MATStruct>
+                </Array>
+                <Array PropName="TCPIP" Type="Struct" Dimension="1*1">
+                  <MATStruct>
+                    <Field Name="IPAddress" Class="char">ros.codertarget.internal.getExtmodeDeviceAddress(hCS)</Field>
+                    <Field Name="Port" Class="char">17725</Field>
+                    <Field Name="Verbose" Class="logical">0</Field>
+                    <Field Name="RunInBackground" Class="logical">1</Field>
+                  </MATStruct>
+                </Array>
+              </MATStruct>
+            </Array>
+            <Array PropName="ExtMode" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="Configuration" Class="char">XCP on TCP/IP</Field>
+              </MATStruct>
+            </Array>
+            <Field Name="RTOS" Class="char">Linux</Field>
+            <Field Name="RTOSBaseRateTaskPriority" Class="char">40</Field>
+            <Field Name="Scheduler_interrupt_source" Class="double">0.0</Field>
+            <Array PropName="Packaging" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="MaintainerName" Class="char">ROS User</Field>
+                <Field Name="MaintainerEmail" Class="char">ros2user@test.com</Field>
+                <Field Name="License" Class="char">BSD</Field>
+                <Field Name="Version" Class="char">1.0.0</Field>
+              </MATStruct>
+            </Array>
+            <Array PropName="BoardParameters" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="DeviceAddress" Class="char"/>
+                <Field Name="Username" Class="char"/>
+              </MATStruct>
+            </Array>
+            <Array PropName="ROS" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="DeploymentType" Class="char">Standard Node</Field>
+                <Field Name="RemoteBuild" Class="logical">0</Field>
+                <Field Name="RefMdlPkg" Class="char">Standalone package</Field>
+                <Field Name="GenerateROSControl" Class="logical">0</Field>
+                <Field Name="GenerateROSComponent" Class="logical">0</Field>
+                <Field Name="ROSTimeStepping" Class="logical">0</Field>
+                <Field Name="ROSTimeNotification" Class="logical">0</Field>
+                <Field Name="StepNotify" Class="char">/step_notify</Field>
+              </MATStruct>
+            </Array>
+            <Array PropName="Runtime" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="BuildAction" Class="char">Build and run</Field>
+              </MATStruct>
+            </Array>
+            <Array PropName="ROS2Install" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="Folder" Class="char">/opt/ros/jazzy</Field>
+                <Field Name="Workspace" Class="char">/home/user/ros2_ws</Field>
+              </MATStruct>
+            </Array>
+            <Array PropName="ExtModeInfo" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="BufferSize" Class="double">1000000.0</Field>
+                <Field Name="TargetPollingTime" Class="char">2</Field>
+              </MATStruct>
+            </Array>
+            <Array PropName="CAN" Type="Struct" Dimension="1*1">
+              <MATStruct>
+                <Field Name="Configure" Class="double">0.0</Field>
+                <Field Name="NumInterfaces" Class="char">1</Field>
+                <Field Name="InterfaceLabel0" Class="double">[]</Field>
+                <Field Name="InterfaceName0" Class="char">can0</Field>
+                <Field Name="InterfaceType0" Class="char">Real</Field>
+                <Field Name="BusSpeed0" Class="char">500</Field>
+                <Field Name="TXQueueSize0" Class="double">65536.0</Field>
+                <Field Name="InterfaceLabel1" Class="double">[]</Field>
+                <Field Name="InterfaceName1" Class="char">can1</Field>
+                <Field Name="InterfaceType1" Class="char">Real</Field>
+                <Field Name="BusSpeed1" Class="char">500</Field>
+                <Field Name="TXQueueSize1" Class="double">65536.0</Field>
+                <Field Name="InterfaceLabel2" Class="double">[]</Field>
+                <Field Name="InterfaceName2" Class="char">can2</Field>
+                <Field Name="InterfaceType2" Class="char">Real</Field>
+                <Field Name="BusSpeed2" Class="char">500</Field>
+                <Field Name="TXQueueSize2" Class="double">65536.0</Field>
+                <Field Name="InterfaceLabel3" Class="double">[]</Field>
+                <Field Name="InterfaceName3" Class="char">can3</Field>
+                <Field Name="InterfaceType3" Class="char">Real</Field>
+                <Field Name="BusSpeed3" Class="char">500</Field>
+                <Field Name="TXQueueSize3" Class="double">65536.0</Field>
+                <Field Name="InterfaceLabel4" Class="double">[]</Field>
+                <Field Name="InterfaceName4" Class="char">can4</Field>
+                <Field Name="InterfaceType4" Class="char">Real</Field>
+                <Field Name="BusSpeed4" Class="char">500</Field>
+                <Field Name="TXQueueSize4" Class="double">65536.0</Field>
+                <Field Name="AllowAllFilter" Class="double">1.0</Field>
+                <Field Name="Buffer0IDType" Class="char">Normal</Field>
+                <Field Name="AcceptanceMask0" Class="char">0</Field>
+                <Field Name="AcceptanceFilter0" Class="char">255</Field>
+                <Field Name="InverseFilter0" Class="char">0</Field>
+                <Field Name="Buffer1IDType" Class="char">Normal</Field>
+                <Field Name="AcceptanceMask1" Class="char">0</Field>
+                <Field Name="AcceptanceFilter1" Class="char">255</Field>
+                <Field Name="InverseFilter1" Class="char">0</Field>
+                <Field Name="Buffer2IDType" Class="char">Normal</Field>
+                <Field Name="AcceptanceMask2" Class="char">0</Field>
+                <Field Name="AcceptanceFilter2" Class="char">255</Field>
+                <Field Name="InverseFilter2" Class="char">0</Field>
+                <Field Name="Buffer3IDType" Class="char">Normal</Field>
+                <Field Name="AcceptanceMask3" Class="char">0</Field>
+                <Field Name="AcceptanceFilter3" Class="char">255</Field>
+                <Field Name="InverseFilter3" Class="char">0</Field>
+              </MATStruct>
+            </Array>
+            <Field Name="DataVersion" Class="char">2016.02</Field>
+          </MATStruct>
+        </Array>
+        <P Name="UseSoCProfilerForTargets" Class="char">off</P>
+        <P Name="Description" Class="char">Coder Target</P>
+        <P Name="Version" Class="char">26.0.0</P>
       </Object>
     </Array>
   </Object>
@@ -2081,7 +2191,7 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.json
         ],
         "PreCompExecutionDomainType":"Unset",
         "SimulinkSubDomainType":"Simulink",
-        "SolverName":"ode15s"
+        "SolverName":"FixedStepAuto"
     }
 }
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
@@ -2192,9 +2302,9 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[769, 378, 1535, 815]</P>
+  <P Name="Location">[0, -7, 1536, 816]</P>
   <P Name="Open">on</P>
-  <P Name="ZoomFactor">250</P>
+  <P Name="ZoomFactor">40</P>
   <P Name="ReportName">simulink-default.rpt</P>
   <P Name="SIDHighWatermark">177</P>
   <Block BlockType="Reference" Name="Arm 1 end transformation for spring" SID="61">
@@ -6244,7 +6354,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[769.0, 378.0, 766.0, 437.0]</P>
+      <P Name="Location" Class="double">[0.0, -7.0, 1536.0, 823.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">1</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -6262,10 +6372,10 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[664.0, 84.0]</P>
-          <P Name="ZoomFactor" Class="double">2.5</P>
-          <P Name="Offset" Class="double">[127.52726517873408, -251.94530747523547]</P>
-          <P Name="SceneRectInView" Class="double">[127.52726517873408, -251.94530747523547, 265.6, 33.6]</P>
+          <P Name="Extents" Class="double">[1434.0, 470.0]</P>
+          <P Name="ZoomFactor" Class="double">0.4</P>
+          <P Name="Offset" Class="double">[-1004.774046255925, -765.10602821937437]</P>
+          <P Name="SceneRectInView" Class="double">[-1004.774046255925, -765.10602821937437, 3585.0, 1175.0]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
@@ -6305,7 +6415,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAE0AAAC6vwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAAuoAAAAAAP////oAAAABAgAAAAX7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAABsAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AdQBuAHQAaQB0AGwAZQBkAQAAAAD/////AAAAAAAAAAD7AAAAfABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAMgAgAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAHMAaQBtAHUAbABhAHQAaQBvAG4AXwByAG8AdgBlAHIBAAAAAP////8AAAAAAAAAAPsAAACIAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AcwBpAG0AdQBsAGEAdABpAG8AbgBfAHIAbwB2AGUAcgBfAGYAaQBuAGEAbAAAAAAA/////wAAAAAAAAAA+wAAAIgATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByADIAIABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAUwB0AHUAZABpAG8AQwBvAG0AcABvAG4AZQBuAHQALwBzAGkAbQB1AGwAYQB0AGkAbwBuAF8AYQBjAHQAdQBhAGwAcgBvAHYAZQByAAAAAAD/////AAAAAAAAAAD7AAAAYABTAGkAbQB1AGwAaQBuAGsAOgBFAGQAaQB0AG8AcgA6AFIAZQBmAGUAcgBlAG4AYwBlAGQARgBpAGwAZQBzAC8AUgBlAGYAZQByAGUAbgBjAGUAZAAgAEYAaQBsAGUAcwAAAAAA/////wAAAI0A////AAAAAQAAAAAAAAAA/AIAAAAB+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAAGsAP///wAAAAMAAAK6AAAA0PwBAAAAAfv/////AQAAACEAAAK6AAACeQD///8AAAK6AAAAkQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA==</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAE0AAAC6vwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD8AAAAeQAAAuoAAAAAAP////oAAAABAgAAAAX7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAABsAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AdQBuAHQAaQB0AGwAZQBkAQAAAAD/////AAAAAAAAAAD7AAAAfABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAMgAgAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgBTAHQAdQBkAGkAbwBDAG8AbQBwAG8AbgBlAG4AdAAvAHMAaQBtAHUAbABhAHQAaQBvAG4AXwByAG8AdgBlAHIBAAAAAP////8AAAAAAAAAAPsAAACIAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AcwBpAG0AdQBsAGEAdABpAG8AbgBfAHIAbwB2AGUAcgBfAGYAaQBuAGEAbAAAAAAA/////wAAAAAAAAAA+wAAAIgATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByADIAIABMAGkAYgByAGEAcgB5AEIAcgBvAHcAcwBlAHIAUwB0AHUAZABpAG8AQwBvAG0AcABvAG4AZQBuAHQALwBzAGkAbQB1AGwAYQB0AGkAbwBuAF8AYQBjAHQAdQBhAGwAcgBvAHYAZQByAAAAAAD/////AAAAAAAAAAD7AAAAYABTAGkAbQB1AGwAaQBuAGsAOgBFAGQAaQB0AG8AcgA6AFIAZQBmAGUAcgBlAG4AYwBlAGQARgBpAGwAZQBzAC8AUgBlAGYAZQByAGUAbgBjAGUAZAAgAEYAaQBsAGUAcwAAAAAA/////wAAAI0A////AAAAAQAAAAAAAAAA/AIAAAAB+wAAAFQARwBMAFUARQAyADoAUAByAG8AcABlAHIAdAB5AEkAbgBzAHAAZQBjAHQAbwByAC8AUAByAG8AcABlAHIAdAB5ACAASQBuAHMAcABlAGMAdABvAHIAAAAAAP////8AAAGsAP///wAAAAMAAAW8AAAA0PwBAAAAAfv/////AQAAACEAAAW8AAACeQD///8AAAW8AAACEwAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA==</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">5b02ddfe-3052-424d-a34c-e1885931a545</P>
     </Object>

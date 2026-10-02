@@ -1,0 +1,4837 @@
+=== MODEL: simulation_actualrover_FIXED (MATLAB 26.1.0.3346908 (R2026a) Update 5) ===
+
+--- Settings ---
+Solver = ode15s
+SolverType = Variable-step
+StopTime = 150
+MaxStep = auto
+RelTol = 1e-3
+AbsTol = auto
+InitFcn = 
+PreLoadFcn = 
+PostLoadFcn = 
+
+--- Model workspace variables ---
+
+
+=== BLOCKS (135) ===
+
+[1] simulation_actualrover_FIXED/Arm 1 end transformation for spring
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [145 -20 185 20]
+
+[2] simulation_actualrover_FIXED/Arm 2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [-55 480 -15 520]
+
+[3] simulation_actualrover_FIXED/Arm 2 end transform for spring
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [50 540 90 580]
+
+[4] simulation_actualrover_FIXED/Arm1 
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [-55 15 -15 55]
+
+[5] simulation_actualrover_FIXED/Chassis
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [760 225 800 265]
+
+[6] simulation_actualrover_FIXED/Chassis Pivot transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [465 300 505 340]
+
+[7] simulation_actualrover_FIXED/Chassis pivot
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Revolute Joint
+    ReferenceBlock: sm_lib/Joints/Revolute Joint
+    Orientation: right
+    Position: [890 300 930 340]
+
+[8] simulation_actualrover_FIXED/Differential render pivot
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Revolute Joint
+    ReferenceBlock: sm_lib/Joints/Revolute Joint
+    Orientation: right
+    Position: [90 150 130 190]
+
+[9] simulation_actualrover_FIXED/Differential render pivot transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [50 240 90 280]
+
+[10] simulation_actualrover_FIXED/From
+Workspace
+    BlockType: FromWorkspace
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [970 -287 1035 -263]
+
+[11] simulation_actualrover_FIXED/From
+Workspace1
+    BlockType: FromWorkspace
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [795 668 860 692]
+
+[12] simulation_actualrover_FIXED/Mechanism
+Configuration
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Mechanism Configuration
+    ReferenceBlock: sm_lib/Utilities/Mechanism Configuration
+    Orientation: right
+    Position: [180 420 220 460]
+
+[13] simulation_actualrover_FIXED/PS-Simulink
+Converter
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [995 302 1010 318]
+
+[14] simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[15] simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[16] simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[17] simulation_actualrover_FIXED/PS-Simulink
+Converter/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[18] simulation_actualrover_FIXED/PS-Simulink
+Converter/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[19] simulation_actualrover_FIXED/PS-Simulink
+Converter1
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [995 317 1010 333]
+
+[20] simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[21] simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[22] simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[23] simulation_actualrover_FIXED/PS-Simulink
+Converter1/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[24] simulation_actualrover_FIXED/PS-Simulink
+Converter1/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[25] simulation_actualrover_FIXED/PS-Simulink
+Converter2
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [700 -18 715 -2]
+
+[26] simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[27] simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[28] simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[29] simulation_actualrover_FIXED/PS-Simulink
+Converter2/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[30] simulation_actualrover_FIXED/PS-Simulink
+Converter2/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[31] simulation_actualrover_FIXED/PS-Simulink
+Converter3
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [700 72 715 88]
+
+[32] simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[33] simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[34] simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[35] simulation_actualrover_FIXED/PS-Simulink
+Converter3/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[36] simulation_actualrover_FIXED/PS-Simulink
+Converter3/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[37] simulation_actualrover_FIXED/PS-Simulink
+Converter4
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [700 492 715 508]
+
+[38] simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[39] simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[40] simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[41] simulation_actualrover_FIXED/PS-Simulink
+Converter4/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[42] simulation_actualrover_FIXED/PS-Simulink
+Converter4/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[43] simulation_actualrover_FIXED/PS-Simulink
+Converter5
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [700 602 715 618]
+
+[44] simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[45] simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[46] simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[47] simulation_actualrover_FIXED/PS-Simulink
+Converter5/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[48] simulation_actualrover_FIXED/PS-Simulink
+Converter5/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[49] simulation_actualrover_FIXED/PS-Simulink
+Converter6
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [820 -178 835 -162]
+
+[50] simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[51] simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[52] simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[53] simulation_actualrover_FIXED/PS-Simulink
+Converter6/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[54] simulation_actualrover_FIXED/PS-Simulink
+Converter6/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[55] simulation_actualrover_FIXED/PS-Simulink
+Converter7
+    BlockType: SubSystem
+    MaskType: PS-Simulink Converter
+    ReferenceBlock: nesl_utility/PS-Simulink Converter
+    Orientation: right
+    Position: [740 882 755 898]
+
+[56] simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY
+    Orientation: right
+    Position: [110 38 165 82]
+
+[57] simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/Ground
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/Ground
+    Orientation: right
+    Position: [0 0 120 30]
+
+[58] simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/EVAL_KEY/output
+    Orientation: right
+    Position: [680 0 800 30]
+
+[59] simulation_actualrover_FIXED/PS-Simulink
+Converter7/input
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/input
+    Orientation: right
+    Position: [30 51 60 69]
+
+[60] simulation_actualrover_FIXED/PS-Simulink
+Converter7/output
+    BlockType: Outport
+    MaskType: 
+    ReferenceBlock: nesl_utility/PS-Simulink Converter/output
+    Orientation: right
+    Position: [190 53 220 67]
+
+[61] simulation_actualrover_FIXED/Pivot to Arm 1 Transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [215 90 255 130]
+
+[62] simulation_actualrover_FIXED/Pivot to Arm 2 Transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [70 390 110 430]
+
+[63] simulation_actualrover_FIXED/Prismatic
+Joint
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Prismatic Joint
+    ReferenceBlock: sm_lib/Joints/Prismatic Joint
+    Orientation: right
+    Position: [985 715 1025 755]
+
+[64] simulation_actualrover_FIXED/Prismatic
+Joint1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Prismatic Joint
+    ReferenceBlock: sm_lib/Joints/Prismatic Joint
+    Orientation: right
+    Position: [1090 -210 1130 -170]
+
+[65] simulation_actualrover_FIXED/Prismatic
+Joint2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Prismatic Joint
+    ReferenceBlock: sm_lib/Joints/Prismatic Joint
+    Orientation: right
+    Position: [-30 835 10 875]
+
+[66] simulation_actualrover_FIXED/Prismatic
+Joint3
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Prismatic Joint
+    ReferenceBlock: sm_lib/Joints/Prismatic Joint
+    Orientation: right
+    Position: [215 -335 255 -295]
+
+[67] simulation_actualrover_FIXED/Rigid
+Transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [340 -160 380 -120]
+
+[68] simulation_actualrover_FIXED/Rigid
+Transform1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [250 755 290 795]
+
+[69] simulation_actualrover_FIXED/Rigid
+Transform2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [915 790 955 830]
+
+[70] simulation_actualrover_FIXED/Rigid
+Transform3
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [995 625 1035 665]
+
+[71] simulation_actualrover_FIXED/Rigid
+Transform4
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [945 -140 985 -100]
+
+[72] simulation_actualrover_FIXED/Rigid
+Transform5
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [1125 -90 1165 -50]
+
+[73] simulation_actualrover_FIXED/Rocker 1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [285 540 325 580]
+
+[74] simulation_actualrover_FIXED/Rocker 1 Pivot transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [465 395 505 435]
+
+[75] simulation_actualrover_FIXED/Rocker 1 end transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [420 580 460 620]
+
+[76] simulation_actualrover_FIXED/Rocker 1 pivot
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Revolute Joint
+    ReferenceBlock: sm_lib/Joints/Revolute Joint
+    Orientation: right
+    Position: [580 470 620 510]
+
+[77] simulation_actualrover_FIXED/Rocker 1 to spring of wheel
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [215 675 255 715]
+
+[78] simulation_actualrover_FIXED/Rocker 2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [285 25 325 65]
+
+[79] simulation_actualrover_FIXED/Rocker 2 Pivot tranform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [465 185 505 225]
+
+[80] simulation_actualrover_FIXED/Rocker 2 end transform
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [430 -40 470 0]
+
+[81] simulation_actualrover_FIXED/Rocker 2 pivot
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Revolute Joint
+    ReferenceBlock: sm_lib/Joints/Revolute Joint
+    Orientation: right
+    Position: [580 50 620 90]
+
+[82] simulation_actualrover_FIXED/Rocker 2 to spring of wheel
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Rigid Transform
+    ReferenceBlock: sm_lib/Frames and Transforms/Rigid Transform
+    Orientation: right
+    Position: [390 -285 430 -245]
+
+[83] simulation_actualrover_FIXED/Scope
+    BlockType: Scope
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [1055 254 1085 286]
+
+[84] simulation_actualrover_FIXED/Scope1
+    BlockType: Scope
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [1055 309 1085 341]
+
+[85] simulation_actualrover_FIXED/Scope2
+    BlockType: Scope
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [765 -26 795 6]
+
+[86] simulation_actualrover_FIXED/Scope3
+    BlockType: Scope
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [785 64 815 96]
+
+[87] simulation_actualrover_FIXED/Scope4
+    BlockType: Scope
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [765 484 795 516]
+
+[88] simulation_actualrover_FIXED/Scope5
+    BlockType: Scope
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [765 594 795 626]
+
+[89] simulation_actualrover_FIXED/Simulink-PS
+Converter
+    BlockType: SubSystem
+    MaskType: Simulink-PS Converter
+    ReferenceBlock: nesl_utility/Simulink-PS Converter
+    Orientation: right
+    Position: [900 672 915 688]
+
+[90] simulation_actualrover_FIXED/Simulink-PS
+Converter/input0
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/input0
+    Orientation: right
+    Position: [25 43 55 57]
+
+[91] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY
+    Orientation: right
+    Position: [85 27 160 163]
+
+[92] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input0
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/input0
+    Orientation: right
+    Position: [0 0 120 30]
+
+[93] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input1
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/input1
+    Orientation: right
+    Position: [0 50 120 80]
+
+[94] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input2
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/input2
+    Orientation: right
+    Position: [0 100 120 130]
+
+[95] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator0
+    BlockType: Terminator
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/Terminator0
+    Orientation: right
+    Position: [340 0 460 30]
+
+[96] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator1
+    BlockType: Terminator
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/Terminator1
+    Orientation: right
+    Position: [340 50 460 80]
+
+[97] simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator2
+    BlockType: Terminator
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/Terminator2
+    Orientation: right
+    Position: [340 100 460 130]
+
+[98] simulation_actualrover_FIXED/Simulink-PS
+Converter/input1
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/input1
+    Orientation: right
+    Position: [25 88 55 102]
+
+[99] simulation_actualrover_FIXED/Simulink-PS
+Converter/input2
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/input2
+    Orientation: right
+    Position: [25 133 55 147]
+
+[100] simulation_actualrover_FIXED/Simulink-PS
+Converter/output
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/output
+    Orientation: right
+    Position: [245 66 275 84]
+
+[101] simulation_actualrover_FIXED/Simulink-PS
+Converter2
+    BlockType: SubSystem
+    MaskType: Simulink-PS Converter
+    ReferenceBlock: nesl_utility/Simulink-PS Converter
+    Orientation: right
+    Position: [1075 -283 1090 -267]
+
+[102] simulation_actualrover_FIXED/Simulink-PS
+Converter2/input0
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/input0
+    Orientation: right
+    Position: [25 43 55 57]
+
+[103] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY
+    Orientation: right
+    Position: [85 27 160 163]
+
+[104] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input0
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/input0
+    Orientation: right
+    Position: [0 0 120 30]
+
+[105] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input1
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/input1
+    Orientation: right
+    Position: [0 50 120 80]
+
+[106] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input2
+    BlockType: Inport
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/input2
+    Orientation: right
+    Position: [0 100 120 130]
+
+[107] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator0
+    BlockType: Terminator
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/Terminator0
+    Orientation: right
+    Position: [340 0 460 30]
+
+[108] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator1
+    BlockType: Terminator
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/Terminator1
+    Orientation: right
+    Position: [340 50 460 80]
+
+[109] simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator2
+    BlockType: Terminator
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/EVAL_KEY/Terminator2
+    Orientation: right
+    Position: [340 100 460 130]
+
+[110] simulation_actualrover_FIXED/Simulink-PS
+Converter2/input1
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/input1
+    Orientation: right
+    Position: [25 88 55 102]
+
+[111] simulation_actualrover_FIXED/Simulink-PS
+Converter2/input2
+    BlockType: Ground
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/input2
+    Orientation: right
+    Position: [25 133 55 147]
+
+[112] simulation_actualrover_FIXED/Simulink-PS
+Converter2/output
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/Simulink-PS Converter/output
+    Orientation: right
+    Position: [245 66 275 84]
+
+[113] simulation_actualrover_FIXED/Solver
+Configuration
+    BlockType: SubSystem
+    MaskType: Solver Configuration
+    ReferenceBlock: nesl_utility/Solver Configuration
+    Orientation: right
+    Position: [185 239 230 271]
+
+[114] simulation_actualrover_FIXED/Solver
+Configuration/EVAL_KEY
+    BlockType: SubSystem
+    MaskType: 
+    ReferenceBlock: nesl_utility/Solver Configuration/EVAL_KEY
+    Orientation: right
+    Position: [25 28 80 72]
+
+[115] simulation_actualrover_FIXED/Solver
+Configuration/port
+    BlockType: PMIOPort
+    MaskType: 
+    ReferenceBlock: nesl_utility/Solver Configuration/port
+    Orientation: right
+    Position: [140 41 170 59]
+
+[116] simulation_actualrover_FIXED/Spherical Solid
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spherical Solid
+    ReferenceBlock: sm_lib/Body Elements/Spherical Solid
+    Orientation: right
+    Position: [815 745 855 785]
+
+[117] simulation_actualrover_FIXED/Spherical Solid1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spherical Solid
+    ReferenceBlock: sm_lib/Body Elements/Spherical Solid
+    Orientation: right
+    Position: [775 -115 815 -75]
+
+[118] simulation_actualrover_FIXED/Spring 1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spring and Damper Force
+    ReferenceBlock: sm_lib/Forces and Torques/Spring and Damper Force
+    Orientation: right
+    Position: [560 580 600 620]
+
+[119] simulation_actualrover_FIXED/Spring 2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spring and Damper Force
+    ReferenceBlock: sm_lib/Forces and Torques/Spring and Damper Force
+    Orientation: right
+    Position: [570 -40 610 0]
+
+[120] simulation_actualrover_FIXED/Spring and
+Damper Force
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spring and Damper Force
+    ReferenceBlock: sm_lib/Forces and Torques/Spring and Damper Force
+    Orientation: right
+    Position: [120 740 160 780]
+
+[121] simulation_actualrover_FIXED/Spring and
+Damper Force1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spring and Damper Force
+    ReferenceBlock: sm_lib/Forces and Torques/Spring and Damper Force
+    Orientation: right
+    Position: [590 765 630 805]
+
+[122] simulation_actualrover_FIXED/Spring and
+Damper Force2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spring and Damper Force
+    ReferenceBlock: sm_lib/Forces and Torques/Spring and Damper Force
+    Orientation: right
+    Position: [250 -225 290 -185]
+
+[123] simulation_actualrover_FIXED/Spring and
+Damper Force4
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Spring and Damper Force
+    ReferenceBlock: sm_lib/Forces and Torques/Spring and Damper Force
+    Orientation: right
+    Position: [605 -160 645 -120]
+
+[124] simulation_actualrover_FIXED/To Workspace
+    BlockType: ToWorkspace
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [855 -185 945 -155]
+
+[125] simulation_actualrover_FIXED/To Workspace1
+    BlockType: ToWorkspace
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [765 875 855 905]
+
+[126] simulation_actualrover_FIXED/Transform
+Sensor1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Transform Sensor
+    ReferenceBlock: sm_lib/Frames and Transforms/Transform Sensor
+    Orientation: right
+    Position: [735 -200 775 -160]
+
+[127] simulation_actualrover_FIXED/Transform
+Sensor2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Transform Sensor
+    ReferenceBlock: sm_lib/Frames and Transforms/Transform Sensor
+    Orientation: right
+    Position: [655 860 695 900]
+
+[128] simulation_actualrover_FIXED/Weld Joint
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Weld Joint
+    ReferenceBlock: sm_lib/Joints/Weld Joint
+    Orientation: right
+    Position: [120 675 160 715]
+
+[129] simulation_actualrover_FIXED/Weld Joint1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Weld Joint
+    ReferenceBlock: sm_lib/Joints/Weld Joint
+    Orientation: right
+    Position: [315 -285 355 -245]
+
+[130] simulation_actualrover_FIXED/Weld Joint3
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Weld Joint
+    ReferenceBlock: sm_lib/Joints/Weld Joint
+    Orientation: right
+    Position: [180 -160 220 -120]
+
+[131] simulation_actualrover_FIXED/Weld Joint4
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Weld Joint
+    ReferenceBlock: sm_lib/Joints/Weld Joint
+    Orientation: right
+    Position: [145 805 185 845]
+
+[132] simulation_actualrover_FIXED/World Frame
+    BlockType: SimscapeMultibodyBlock
+    MaskType: World Frame
+    ReferenceBlock: sm_lib/Frames and Transforms/World Frame
+    Orientation: right
+    Position: [180 345 220 385]
+
+[133] simulation_actualrover_FIXED/link3_angle
+    BlockType: ToWorkspace
+    MaskType: 
+    ReferenceBlock: 
+    Orientation: right
+    Position: [985 155 1075 185]
+
+[134] simulation_actualrover_FIXED/wheel 1
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [420 740 460 780]
+
+[135] simulation_actualrover_FIXED/wheel 2
+    BlockType: SimscapeMultibodyBlock
+    MaskType: Brick Solid
+    ReferenceBlock: sm_lib/Body Elements/Brick Solid
+    Orientation: right
+    Position: [520 -200 560 -160]
+
+
+=== CONNECTIONS (block -> connected blocks, per port) ===
+
+simulation_actualrover_FIXED/Arm 1 end transformation for spring
+    LConn1     -> simulation_actualrover_FIXED/Arm1 
+    RConn1     -> simulation_actualrover_FIXED/Spring 2
+
+simulation_actualrover_FIXED/Arm 2
+    LConn1     -> simulation_actualrover_FIXED/Pivot to Arm 2 Transform
+    RConn1     -> simulation_actualrover_FIXED/Arm 2 end transform for spring
+
+simulation_actualrover_FIXED/Arm 2 end transform for spring
+    LConn1     -> simulation_actualrover_FIXED/Arm 2
+    RConn1     -> simulation_actualrover_FIXED/Spring 1
+
+simulation_actualrover_FIXED/Arm1 
+    LConn1     -> simulation_actualrover_FIXED/Pivot to Arm 1 Transform
+    RConn1     -> simulation_actualrover_FIXED/Arm 1 end transformation for spring
+
+simulation_actualrover_FIXED/Chassis
+    LConn1     -> simulation_actualrover_FIXED/Differential render pivot transform
+    RConn1     -> simulation_actualrover_FIXED/Chassis pivot
+
+simulation_actualrover_FIXED/Chassis Pivot transform
+    LConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/Rocker 1 Pivot transform | simulation_actualrover_FIXED/World Frame
+    RConn1     -> simulation_actualrover_FIXED/Chassis pivot
+
+simulation_actualrover_FIXED/Chassis pivot
+    LConn1     -> simulation_actualrover_FIXED/Chassis Pivot transform
+    RConn1     -> simulation_actualrover_FIXED/Chassis
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter
+    RConn3     -> simulation_actualrover_FIXED/PS-Simulink
+Converter1
+
+simulation_actualrover_FIXED/Differential render pivot
+    LConn1     -> simulation_actualrover_FIXED/Differential render pivot transform
+    RConn1     -> simulation_actualrover_FIXED/Pivot to Arm 1 Transform | simulation_actualrover_FIXED/Pivot to Arm 2 Transform
+
+simulation_actualrover_FIXED/Differential render pivot transform
+    LConn1     -> simulation_actualrover_FIXED/Chassis
+    RConn1     -> simulation_actualrover_FIXED/Differential render pivot
+
+simulation_actualrover_FIXED/From
+Workspace
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2
+
+simulation_actualrover_FIXED/From
+Workspace1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter
+
+simulation_actualrover_FIXED/Mechanism
+Configuration
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/Rocker 1 Pivot transform | simulation_actualrover_FIXED/World Frame
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter
+    1          -> simulation_actualrover_FIXED/Scope | simulation_actualrover_FIXED/link3_angle
+    LConn1     -> simulation_actualrover_FIXED/Chassis pivot
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1
+    1          -> simulation_actualrover_FIXED/Scope1
+    LConn1     -> simulation_actualrover_FIXED/Chassis pivot
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter1/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2
+    1          -> simulation_actualrover_FIXED/Scope2
+    LConn1     -> simulation_actualrover_FIXED/Spring 2
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter2/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3
+    1          -> simulation_actualrover_FIXED/Scope3
+    LConn1     -> simulation_actualrover_FIXED/Rocker 2 pivot
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter3/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4
+    1          -> simulation_actualrover_FIXED/Scope4
+    LConn1     -> simulation_actualrover_FIXED/Rocker 1 pivot
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter4/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5
+    1          -> simulation_actualrover_FIXED/Scope5
+    LConn1     -> simulation_actualrover_FIXED/Spring 1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter5/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6
+    1          -> simulation_actualrover_FIXED/To Workspace
+    LConn1     -> simulation_actualrover_FIXED/Transform
+Sensor1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter6/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7
+    1          -> (unconnected)
+    LConn1     -> simulation_actualrover_FIXED/Transform
+Sensor2
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter7/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/Ground
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/output
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/Ground
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/input
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/output
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY
+
+simulation_actualrover_FIXED/Pivot to Arm 1 Transform
+    LConn1     -> simulation_actualrover_FIXED/Pivot to Arm 2 Transform | simulation_actualrover_FIXED/Differential render pivot
+    RConn1     -> simulation_actualrover_FIXED/Arm1 
+
+simulation_actualrover_FIXED/Pivot to Arm 2 Transform
+    LConn1     -> simulation_actualrover_FIXED/Pivot to Arm 1 Transform | simulation_actualrover_FIXED/Differential render pivot
+    RConn1     -> simulation_actualrover_FIXED/Arm 2
+
+simulation_actualrover_FIXED/Prismatic
+Joint
+    LConn1     -> simulation_actualrover_FIXED/Rigid
+Transform3
+    LConn2     -> simulation_actualrover_FIXED/Simulink-PS
+Converter
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform2
+
+simulation_actualrover_FIXED/Prismatic
+Joint1
+    LConn1     -> simulation_actualrover_FIXED/Rigid
+Transform5
+    LConn2     -> simulation_actualrover_FIXED/Simulink-PS
+Converter2
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform4
+
+simulation_actualrover_FIXED/Prismatic
+Joint2
+    LConn1     -> simulation_actualrover_FIXED/Weld Joint | simulation_actualrover_FIXED/Spring and
+Damper Force
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform1 | simulation_actualrover_FIXED/wheel 1
+
+simulation_actualrover_FIXED/Prismatic
+Joint3
+    LConn1     -> simulation_actualrover_FIXED/Weld Joint1 | simulation_actualrover_FIXED/Spring and
+Damper Force2
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform | simulation_actualrover_FIXED/wheel 2
+
+simulation_actualrover_FIXED/Rigid
+Transform
+    LConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint3 | simulation_actualrover_FIXED/wheel 2
+    RConn1     -> simulation_actualrover_FIXED/Weld Joint3
+
+simulation_actualrover_FIXED/Rigid
+Transform1
+    LConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint2 | simulation_actualrover_FIXED/wheel 1
+    RConn1     -> simulation_actualrover_FIXED/Weld Joint4
+
+simulation_actualrover_FIXED/Rigid
+Transform2
+    LConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint
+    RConn1     -> simulation_actualrover_FIXED/Spherical Solid
+
+simulation_actualrover_FIXED/Rigid
+Transform3
+    LConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rocker 1 Pivot transform | simulation_actualrover_FIXED/World Frame
+    RConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint
+
+simulation_actualrover_FIXED/Rigid
+Transform4
+    LConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint1
+    RConn1     -> simulation_actualrover_FIXED/Spherical Solid1
+
+simulation_actualrover_FIXED/Rigid
+Transform5
+    LConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/Rocker 1 Pivot transform | simulation_actualrover_FIXED/World Frame
+    RConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint1
+
+simulation_actualrover_FIXED/Rocker 1
+    LConn1     -> simulation_actualrover_FIXED/Rocker 1 end transform
+    LConn2     -> simulation_actualrover_FIXED/Rocker 1 to spring of wheel
+    RConn1     -> simulation_actualrover_FIXED/Rocker 1 pivot
+
+simulation_actualrover_FIXED/Rocker 1 Pivot transform
+    LConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/World Frame
+    RConn1     -> simulation_actualrover_FIXED/Rocker 1 pivot
+
+simulation_actualrover_FIXED/Rocker 1 end transform
+    LConn1     -> simulation_actualrover_FIXED/Rocker 1
+    RConn1     -> simulation_actualrover_FIXED/Spring 1
+
+simulation_actualrover_FIXED/Rocker 1 pivot
+    LConn1     -> simulation_actualrover_FIXED/Rocker 1 Pivot transform
+    RConn1     -> simulation_actualrover_FIXED/Rocker 1
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter4
+
+simulation_actualrover_FIXED/Rocker 1 to spring of wheel
+    LConn1     -> simulation_actualrover_FIXED/Weld Joint
+    RConn1     -> simulation_actualrover_FIXED/Rocker 1
+
+simulation_actualrover_FIXED/Rocker 2
+    LConn1     -> simulation_actualrover_FIXED/Rocker 2 end transform
+    LConn2     -> simulation_actualrover_FIXED/Rocker 2 to spring of wheel
+    RConn1     -> simulation_actualrover_FIXED/Rocker 2 pivot
+
+simulation_actualrover_FIXED/Rocker 2 Pivot tranform
+    LConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/Rocker 1 Pivot transform | simulation_actualrover_FIXED/World Frame
+    RConn1     -> simulation_actualrover_FIXED/Rocker 2 pivot
+
+simulation_actualrover_FIXED/Rocker 2 end transform
+    LConn1     -> simulation_actualrover_FIXED/Rocker 2
+    RConn1     -> simulation_actualrover_FIXED/Spring 2
+
+simulation_actualrover_FIXED/Rocker 2 pivot
+    LConn1     -> simulation_actualrover_FIXED/Rocker 2 Pivot tranform
+    RConn1     -> simulation_actualrover_FIXED/Rocker 2
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter3
+
+simulation_actualrover_FIXED/Rocker 2 to spring of wheel
+    LConn1     -> simulation_actualrover_FIXED/Weld Joint1
+    RConn1     -> simulation_actualrover_FIXED/Rocker 2
+
+simulation_actualrover_FIXED/Scope
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter
+
+simulation_actualrover_FIXED/Scope1
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter1
+
+simulation_actualrover_FIXED/Scope2
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter2
+
+simulation_actualrover_FIXED/Scope3
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter3
+
+simulation_actualrover_FIXED/Scope4
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter4
+
+simulation_actualrover_FIXED/Scope5
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter5
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter
+    1          -> simulation_actualrover_FIXED/From
+Workspace1
+    RConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/input0
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/input0
+    2          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/input1
+    3          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/input2
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input0
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator0
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator1
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input2
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator2
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator0
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input0
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input1
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/Terminator2
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input2
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/input1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/input2
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/output
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2
+    1          -> simulation_actualrover_FIXED/From
+Workspace
+    RConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint1
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/input0
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/input0
+    2          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/input1
+    3          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/input2
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input0
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator0
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator1
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input2
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator2
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator0
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input0
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input1
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/Terminator2
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input2
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/input1
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/input2
+    1          -> simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/output
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/Solver
+Configuration
+    RConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/Rocker 1 Pivot transform | simulation_actualrover_FIXED/World Frame
+
+simulation_actualrover_FIXED/Solver
+Configuration/port
+    RConn1     -> (unconnected)
+
+simulation_actualrover_FIXED/Spherical Solid
+    LConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force1 | simulation_actualrover_FIXED/Transform
+Sensor2
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform2
+
+simulation_actualrover_FIXED/Spherical Solid1
+    LConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force4 | simulation_actualrover_FIXED/Transform
+Sensor1
+    RConn1     -> simulation_actualrover_FIXED/Rigid
+Transform4
+
+simulation_actualrover_FIXED/Spring 1
+    LConn1     -> simulation_actualrover_FIXED/Rocker 1 end transform
+    RConn1     -> simulation_actualrover_FIXED/Arm 2 end transform for spring
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter5
+
+simulation_actualrover_FIXED/Spring 2
+    LConn1     -> simulation_actualrover_FIXED/Rocker 2 end transform
+    RConn1     -> simulation_actualrover_FIXED/Arm 1 end transformation for spring
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter2
+
+simulation_actualrover_FIXED/Spring and
+Damper Force
+    LConn1     -> simulation_actualrover_FIXED/Weld Joint4
+    RConn1     -> simulation_actualrover_FIXED/Weld Joint | simulation_actualrover_FIXED/Prismatic
+Joint2
+
+simulation_actualrover_FIXED/Spring and
+Damper Force1
+    LConn1     -> simulation_actualrover_FIXED/Transform
+Sensor2 | simulation_actualrover_FIXED/Spherical Solid
+    RConn1     -> simulation_actualrover_FIXED/wheel 1 | simulation_actualrover_FIXED/Transform
+Sensor2
+
+simulation_actualrover_FIXED/Spring and
+Damper Force2
+    LConn1     -> simulation_actualrover_FIXED/Weld Joint3
+    RConn1     -> simulation_actualrover_FIXED/Weld Joint1 | simulation_actualrover_FIXED/Prismatic
+Joint3
+
+simulation_actualrover_FIXED/Spring and
+Damper Force4
+    LConn1     -> simulation_actualrover_FIXED/Transform
+Sensor1 | simulation_actualrover_FIXED/Spherical Solid1
+    RConn1     -> simulation_actualrover_FIXED/wheel 2 | simulation_actualrover_FIXED/Transform
+Sensor1
+
+simulation_actualrover_FIXED/To Workspace
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter6
+
+simulation_actualrover_FIXED/To Workspace1
+    1          -> (unconnected)
+
+simulation_actualrover_FIXED/Transform
+Sensor1
+    LConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force4 | simulation_actualrover_FIXED/Spherical Solid1
+    RConn1     -> simulation_actualrover_FIXED/wheel 2 | simulation_actualrover_FIXED/Spring and
+Damper Force4
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter6
+
+simulation_actualrover_FIXED/Transform
+Sensor2
+    LConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force1 | simulation_actualrover_FIXED/Spherical Solid
+    RConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force1 | simulation_actualrover_FIXED/wheel 1
+    RConn2     -> simulation_actualrover_FIXED/PS-Simulink
+Converter7
+
+simulation_actualrover_FIXED/Weld Joint
+    LConn1     -> simulation_actualrover_FIXED/Prismatic
+Joint2 | simulation_actualrover_FIXED/Spring and
+Damper Force
+    RConn1     -> simulation_actualrover_FIXED/Rocker 1 to spring of wheel
+
+simulation_actualrover_FIXED/Weld Joint1
+    LConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force2 | simulation_actualrover_FIXED/Prismatic
+Joint3
+    RConn1     -> simulation_actualrover_FIXED/Rocker 2 to spring of wheel
+
+simulation_actualrover_FIXED/Weld Joint3
+    LConn1     -> simulation_actualrover_FIXED/Rigid
+Transform
+    RConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force2
+
+simulation_actualrover_FIXED/Weld Joint4
+    LConn1     -> simulation_actualrover_FIXED/Rigid
+Transform1
+    RConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force
+
+simulation_actualrover_FIXED/World Frame
+    RConn1     -> simulation_actualrover_FIXED/Mechanism
+Configuration | simulation_actualrover_FIXED/Rigid
+Transform5 | simulation_actualrover_FIXED/Rocker 2 Pivot tranform | simulation_actualrover_FIXED/Solver
+Configuration | simulation_actualrover_FIXED/Chassis Pivot transform | simulation_actualrover_FIXED/Rigid
+Transform3 | simulation_actualrover_FIXED/Rocker 1 Pivot transform
+
+simulation_actualrover_FIXED/link3_angle
+    1          -> simulation_actualrover_FIXED/PS-Simulink
+Converter
+
+simulation_actualrover_FIXED/wheel 1
+    LConn1     -> simulation_actualrover_FIXED/Rigid
+Transform1 | simulation_actualrover_FIXED/Prismatic
+Joint2
+    RConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force1 | simulation_actualrover_FIXED/Transform
+Sensor2
+
+simulation_actualrover_FIXED/wheel 2
+    LConn1     -> simulation_actualrover_FIXED/Rigid
+Transform | simulation_actualrover_FIXED/Prismatic
+Joint3
+    RConn1     -> simulation_actualrover_FIXED/Spring and
+Damper Force4 | simulation_actualrover_FIXED/Transform
+Sensor1
+
+
+=== PARAMETERS ===
+
+simulation_actualrover_FIXED/Arm 1 end transformation for spring
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = None
+    TranslationCartesianOffset = [0 0 0]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Arm 2
+    BrickDimensions = [0.255,0.10,0.05]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = m
+    ExportEntireGeometry = off
+    InertiaType = CalculateFromGeometry
+    BasedOnType = Mass
+    Density = 2.7
+    Density_conf = compiletime
+    DensityUnits = g/cm^3
+    Mass = 1
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = off
+    SerializedFrames =  <Frames>    <Frame>     <Id>Frame1</Id>     <Value>       <Name>F1</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>-z +x curve</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>    <Frame>     <Id>Frame2</Id>     <Value>       <Name>F2</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>-x surface</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>  </Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
+
+simulation_actualrover_FIXED/Arm 2 end transform for spring
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = None
+    TranslationCartesianOffset = [0 0 0]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Arm1 
+    BrickDimensions = [0.255,0.10,0.05]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = m
+    ExportEntireGeometry = off
+    InertiaType = CalculateFromGeometry
+    BasedOnType = Mass
+    Density = 1
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 1
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = off
+    SerializedFrames =  <Frames>    <Frame>     <Id>Frame1</Id>     <Value>       <Name>F1</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>-z +x curve</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>    <Frame>     <Id>Frame2</Id>     <Value>       <Name>F2</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>-x surface</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>  </Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
+
+simulation_actualrover_FIXED/Chassis
+    BrickDimensions = [0.14, 0.43, 0.424]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = m
+    ExportEntireGeometry = off
+    InertiaType = Custom
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 24
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [200 0. 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = mm
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = on
+    SerializedFrames =  <Frames>    <Frame>     <Id>Frame1</Id>     <Value>       <Name>F1</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>+y surface</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>  </Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
+
+simulation_actualrover_FIXED/Chassis Pivot transform
+    RotationMethod = StandardAxis
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = StandardAxis
+    TranslationCartesianOffset = [0 0 0]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Y
+    TranslationStandardOffset = 0.13
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = cm
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Chassis pivot
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = deg
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = deg/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = deg
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N*m/deg
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N*m/(deg/s)
+    LowerLimitSpecify = off
+    LowerLimitBound = -90
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = deg
+    LowerLimitStiffness = 1e4
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N*m/deg
+    LowerLimitDamping = 10
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N*m/(deg/s)
+    LowerLimitTransitionRegionWidth = 0.1
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = deg
+    UpperLimitSpecify = off
+    UpperLimitBound = 90
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = deg
+    UpperLimitStiffness = 1e4
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N*m/deg
+    UpperLimitDamping = 10
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N*m/(deg/s)
+    UpperLimitTransitionRegionWidth = 0.1
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = deg
+    TorqueActuationMode = NoTorque
+    MotionActuationMode = ComputedMotion
+    SensePosition = on
+    SenseVelocity = on
+    SenseAcceleration = off
+    SenseTorqueForce = off
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.revolute_joint
+
+simulation_actualrover_FIXED/Differential render pivot
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = deg
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = deg/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = deg
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N*m/deg
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N*m/(deg/s)
+    LowerLimitSpecify = off
+    LowerLimitBound = -90
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = deg
+    LowerLimitStiffness = 1e4
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N*m/deg
+    LowerLimitDamping = 10
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N*m/(deg/s)
+    LowerLimitTransitionRegionWidth = 0.1
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = deg
+    UpperLimitSpecify = off
+    UpperLimitBound = 90
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = deg
+    UpperLimitStiffness = 1e4
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N*m/deg
+    UpperLimitDamping = 10
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N*m/(deg/s)
+    UpperLimitTransitionRegionWidth = 0.1
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = deg
+    TorqueActuationMode = NoTorque
+    MotionActuationMode = ComputedMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = off
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.revolute_joint
+
+simulation_actualrover_FIXED/Differential render pivot transform
+    RotationMethod = StandardAxis
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +X
+    RotationAngle = -90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = StandardAxis
+    TranslationCartesianOffset = [0 0 0]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Y
+    TranslationStandardOffset = 0.05
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/From
+Workspace
+    VariableName = terrain2
+    OutDataTypeStr = Inherit: auto
+    SampleTime = 0
+    Interpolate = on
+    ZeroCross = on
+    OutputAfterFinalValue = Holding final value
+
+simulation_actualrover_FIXED/From
+Workspace1
+    VariableName = terrain1
+    OutDataTypeStr = Inherit: auto
+    SampleTime = 0
+    Interpolate = on
+    ZeroCross = on
+    OutputAfterFinalValue = Holding final value
+
+simulation_actualrover_FIXED/Mechanism
+Configuration
+    UniformGravity = Constant
+    GravityVector = [0 0 -9.80665]
+    GravityVector_conf = compiletime
+    GravityVectorUnits = m/s^2
+    LinearizationDelta = 0.001
+    JointModeTransitionNonlinearIterations = 2
+    BlockFunction = simmechanics.library.utilities.mechanism_configuration
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = inherit
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = inherit
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter1/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = inherit
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter2/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = inherit
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter3/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = inherit
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter4/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = inherit
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter5/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = cm
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter6/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = cm
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_output
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    VectorFormat = inherit
+    Unit = cm
+    AffineConversion = off
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/EVAL_KEY/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/input
+    Port = 1
+    Side = Left
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/PS-Simulink
+Converter7/output
+    Port = 1
+    SignalName = 
+    SignalObject = []
+    StorageClass = Auto
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    DataMode = inherit
+    Unit = cm
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    EnsureOutportIsVirtual = off
+    OutputWhenDisabled = held
+    InitialOutput = []
+    MustResolveToSignalObject = off
+    OutputWhenUnConnected = off
+    OutputWhenUnconnectedValue = 0
+    VectorParamsAs1DForOutWhenUnconnected = on
+
+simulation_actualrover_FIXED/Pivot to Arm 1 Transform
+    RotationMethod = RotationSequence
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +X
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYZ
+    RotationSequenceAngles = [0,180,120]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = None
+    TranslationCartesianOffset = [0 0 0]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Pivot to Arm 2 Transform
+    RotationMethod = RotationSequence
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 30
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYZ
+    RotationSequenceAngles = [180 0 60]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = None
+    TranslationCartesianOffset = [0 0 0]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Prismatic
+Joint
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = m
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = m/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = m
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    LowerLimitSpecify = off
+    LowerLimitBound = -1
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = m
+    LowerLimitStiffness = 1e6
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N/m
+    LowerLimitDamping = 1e3
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N/(m/s)
+    LowerLimitTransitionRegionWidth = 1e-4
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = m
+    UpperLimitSpecify = off
+    UpperLimitBound = 1
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = m
+    UpperLimitStiffness = 1e6
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N/m
+    UpperLimitDamping = 1e3
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N/(m/s)
+    UpperLimitTransitionRegionWidth = 1e-4
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = m
+    TorqueActuationMode = ComputedTorque
+    MotionActuationMode = InputMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = off
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.prismatic_joint
+
+simulation_actualrover_FIXED/Prismatic
+Joint1
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = m
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = m/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = m
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    LowerLimitSpecify = off
+    LowerLimitBound = -1
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = m
+    LowerLimitStiffness = 1e6
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N/m
+    LowerLimitDamping = 1e3
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N/(m/s)
+    LowerLimitTransitionRegionWidth = 1e-4
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = m
+    UpperLimitSpecify = off
+    UpperLimitBound = 1
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = m
+    UpperLimitStiffness = 1e6
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N/m
+    UpperLimitDamping = 1e3
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N/(m/s)
+    UpperLimitTransitionRegionWidth = 1e-4
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = m
+    TorqueActuationMode = ComputedTorque
+    MotionActuationMode = InputMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = off
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.prismatic_joint
+
+simulation_actualrover_FIXED/Prismatic
+Joint2
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = m
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = m/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = m
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    LowerLimitSpecify = off
+    LowerLimitBound = -1
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = m
+    LowerLimitStiffness = 1e6
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N/m
+    LowerLimitDamping = 1e3
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N/(m/s)
+    LowerLimitTransitionRegionWidth = 1e-4
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = m
+    UpperLimitSpecify = off
+    UpperLimitBound = 1
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = m
+    UpperLimitStiffness = 1e6
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N/m
+    UpperLimitDamping = 1e3
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N/(m/s)
+    UpperLimitTransitionRegionWidth = 1e-4
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = m
+    TorqueActuationMode = NoTorque
+    MotionActuationMode = ComputedMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = off
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.prismatic_joint
+
+simulation_actualrover_FIXED/Prismatic
+Joint3
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = m
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = m/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = m
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    LowerLimitSpecify = off
+    LowerLimitBound = -1
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = m
+    LowerLimitStiffness = 1e6
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N/m
+    LowerLimitDamping = 1e3
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N/(m/s)
+    LowerLimitTransitionRegionWidth = 1e-4
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = m
+    UpperLimitSpecify = off
+    UpperLimitBound = 1
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = m
+    UpperLimitStiffness = 1e6
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N/m
+    UpperLimitDamping = 1e3
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N/(m/s)
+    UpperLimitTransitionRegionWidth = 1e-4
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = m
+    TorqueActuationMode = NoTorque
+    MotionActuationMode = ComputedMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = off
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.prismatic_joint
+
+simulation_actualrover_FIXED/Rigid
+Transform
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0 0 -0.22]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rigid
+Transform1
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0 0 -0.22]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rigid
+Transform2
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0 0 -0.15]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rigid
+Transform3
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [-0.345 0.235 -0.375]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rigid
+Transform4
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0 0 -0.15]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rigid
+Transform5
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0.345 0.235 -0.375]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rocker 1
+    BrickDimensions = [5,72,5]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = cm
+    ExportEntireGeometry = off
+    InertiaType = Custom
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 2
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = on
+    SerializedFrames =  <Frames>    <Frame>     <Id>Frame1</Id>     <Value>       <Name>F1</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>+x +y +z point</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>    <Frame>     <Id>Frame2</Id>     <Value>       <Name>F2</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>+x +y curve</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>  </Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
+
+simulation_actualrover_FIXED/Rocker 1 Pivot transform
+    RotationMethod = StandardAxis
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [-34.5,-12.5,-8]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = cm
+    TranslationStandardAxis = +Y
+    TranslationStandardOffset = 34.5
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = cm
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rocker 1 end transform
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = None
+    TranslationCartesianOffset = [0.05, 0, -0.15]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = -0.15
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rocker 1 pivot
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = deg
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = deg/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = deg
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N*m/deg
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N*m/(deg/s)
+    LowerLimitSpecify = on
+    LowerLimitBound = -45
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = deg
+    LowerLimitStiffness = 1e4
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N*m/deg
+    LowerLimitDamping = 10
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N*m/(deg/s)
+    LowerLimitTransitionRegionWidth = 0.1
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = deg
+    UpperLimitSpecify = on
+    UpperLimitBound = 45
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = deg
+    UpperLimitStiffness = 1e4
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N*m/deg
+    UpperLimitDamping = 10
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N*m/(deg/s)
+    UpperLimitTransitionRegionWidth = 0.1
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = deg
+    TorqueActuationMode = NoTorque
+    MotionActuationMode = ComputedMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = on
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.revolute_joint
+
+simulation_actualrover_FIXED/Rocker 1 to spring of wheel
+    RotationMethod = StandardAxis
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0 0 0.22]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rocker 2
+    BrickDimensions = [5,72,5]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = cm
+    ExportEntireGeometry = off
+    InertiaType = Custom
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 2
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = on
+    SerializedFrames =  <Frames>    <Frame>     <Id>Frame1</Id>     <Value>       <Name>F2</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>+x +y -z point</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>    <Frame>     <Id>Frame2</Id>     <Value>       <Name>F2</Name>       <Origin>         <Source>GeometricFeature</Source>         <FeatureName>+x +y curve</FeatureName>       </Origin>       <PrimaryAxis>         <DefinedDirection>+Z</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+Z</SourceDirection>         <FeatureName></FeatureName>       </PrimaryAxis>       <SecondaryAxis>         <DefinedDirection>+X</DefinedDirection>         <Source>ReferenceFrame</Source>         <SourceDirection>+X</SourceDirection>         <FeatureName></FeatureName>       </SecondaryAxis>     </Value>   </Frame>  </Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
+
+simulation_actualrover_FIXED/Rocker 2 Pivot tranform
+    RotationMethod = StandardAxis
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [34.5,-12.5,-8]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = cm
+    TranslationStandardAxis = -Y
+    TranslationStandardOffset = 34.5
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = cm
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rocker 2 end transform
+    RotationMethod = None
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Z
+    RotationAngle = 0
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = None
+    TranslationCartesianOffset = 0
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Rocker 2 pivot
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    PositionTargetSpecify = off
+    PositionTargetPriority = High
+    PositionTargetValue = 0
+    PositionTargetValue_conf = compiletime
+    PositionTargetValueUnits = deg
+    VelocityTargetSpecify = off
+    VelocityTargetPriority = High
+    VelocityTargetValue = 0
+    VelocityTargetValue_conf = compiletime
+    VelocityTargetValueUnits = deg/s
+    EquilibriumPosition = 0
+    EquilibriumPosition_conf = compiletime
+    EquilibriumPositionUnits = deg
+    SpringStiffness = 0
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N*m/deg
+    DampingCoefficient = 0
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N*m/(deg/s)
+    LowerLimitSpecify = on
+    LowerLimitBound = -45
+    LowerLimitBound_conf = compiletime
+    LowerLimitBoundUnits = deg
+    LowerLimitStiffness = 1e4
+    LowerLimitStiffness_conf = compiletime
+    LowerLimitStiffnessUnits = N*m/deg
+    LowerLimitDamping = 10
+    LowerLimitDamping_conf = compiletime
+    LowerLimitDampingUnits = N*m/(deg/s)
+    LowerLimitTransitionRegionWidth = 0.1
+    LowerLimitTransitionRegionWidth_conf = compiletime
+    LowerLimitTransitionRegionWidthUnits = deg
+    UpperLimitSpecify = on
+    UpperLimitBound = 45
+    UpperLimitBound_conf = compiletime
+    UpperLimitBoundUnits = deg
+    UpperLimitStiffness = 1e4
+    UpperLimitStiffness_conf = compiletime
+    UpperLimitStiffnessUnits = N*m/deg
+    UpperLimitDamping = 10
+    UpperLimitDamping_conf = compiletime
+    UpperLimitDampingUnits = N*m/(deg/s)
+    UpperLimitTransitionRegionWidth = 0.1
+    UpperLimitTransitionRegionWidth_conf = compiletime
+    UpperLimitTransitionRegionWidthUnits = deg
+    TorqueActuationMode = NoTorque
+    MotionActuationMode = ComputedMotion
+    SensePosition = off
+    SenseVelocity = off
+    SenseAcceleration = off
+    SenseTorqueForce = on
+    SenseLowerLimitTorqueForce = off
+    SenseUpperLimitTorqueForce = off
+    BlockFunction = simmechanics.library.joints.revolute_joint
+
+simulation_actualrover_FIXED/Rocker 2 to spring of wheel
+    RotationMethod = StandardAxis
+    FollAlignAxisA = +X
+    BaseAlignAxisA = +Y
+    FollAlignAxisB = +Y
+    BaseAlignAxisB = +Z
+    RotationStandardAxis = +Y
+    RotationAngle = 90
+    RotationAngle_conf = compiletime
+    RotationAngleUnits = deg
+    RotationArbitraryAxis = [0 0 1]
+    RotationArbitraryAxis_conf = compiletime
+    RotationSequenceAxes = FollowerAxes
+    RotationSequence = XYX
+    RotationSequenceAngles = [0 0 0]
+    RotationSequenceAngles_conf = compiletime
+    RotationSequenceAnglesUnits = deg
+    RotationMatrix = [1 0 0;0 1 0;0 0 1]
+    RotationMatrix_conf = compiletime
+    Quaternion = [1 0 0 0]
+    Quaternion_conf = compiletime
+    TranslationMethod = Cartesian
+    TranslationCartesianOffset = [0 0 0.22]
+    TranslationCartesianOffset_conf = compiletime
+    TranslationCartesianOffsetUnits = m
+    TranslationStandardAxis = +Z
+    TranslationStandardOffset = 0
+    TranslationStandardOffset_conf = compiletime
+    TranslationStandardOffsetUnits = m
+    TranslationROffset = 0
+    TranslationROffset_conf = compiletime
+    TranslationROffsetUnits = m
+    TranslationThetaOffset = 0
+    TranslationThetaOffset_conf = compiletime
+    TranslationThetaOffsetUnits = deg
+    TranslationZOffset = 0
+    TranslationZOffset_conf = compiletime
+    TranslationZOffsetUnits = m
+    BlockFunction = simmechanics.library.frames_transforms.rigid_transform
+
+simulation_actualrover_FIXED/Scope
+    OpenAtSimulationStart = off
+    DisplayFullPath = off
+    NumInputPorts = 1
+    LayoutDimensionsString = [1, 1]
+    SampleTime = -1
+    FrameBasedProcessingString = Elements as channels (sample based)
+    MaximizeAxes = Off
+    AxesScaling = Manual
+    AxesScalingNumUpdates = 10
+    TimeSpan = Auto
+    TimeSpanOverrunAction = Wrap
+    TimeUnits = None
+    TimeDisplayOffset = 0
+    TimeAxisLabels = Bottom displays only
+    ShowTimeAxisLabel = off
+    ActiveDisplayString = 1
+    Title = %<SignalLabel>
+    ShowLegend = off
+    ShowGrid = on
+    PlotAsMagnitudePhase = off
+    ActiveDisplayYMinimum = -7.148948135716541
+    ActiveDisplayYMaximum = 63.952877652329128
+    YLabel = 
+    DataLoggingLimitDataPoints = off
+    DataLoggingMaxPoints = 5000
+    DataLoggingDecimateData = off
+    DataLoggingDecimation = 2
+    DataLogging = off
+    DataLoggingVariableName = ScopeData
+    DataLoggingSaveFormat = Dataset
+
+simulation_actualrover_FIXED/Scope1
+    OpenAtSimulationStart = off
+    DisplayFullPath = off
+    NumInputPorts = 1
+    LayoutDimensionsString = [1, 1]
+    SampleTime = -1
+    FrameBasedProcessingString = Elements as channels (sample based)
+    MaximizeAxes = Off
+    AxesScaling = Manual
+    AxesScalingNumUpdates = 10
+    TimeSpan = Auto
+    TimeSpanOverrunAction = Wrap
+    TimeUnits = None
+    TimeDisplayOffset = 0
+    TimeAxisLabels = Bottom displays only
+    ShowTimeAxisLabel = off
+    ActiveDisplayString = 1
+    Title = %<SignalLabel>
+    ShowLegend = off
+    ShowGrid = on
+    PlotAsMagnitudePhase = off
+    ActiveDisplayYMinimum = -6.5231720196233027
+    ActiveDisplayYMaximum = 7.3933520304495728
+    YLabel = 
+    DataLoggingLimitDataPoints = off
+    DataLoggingMaxPoints = 5000
+    DataLoggingDecimateData = off
+    DataLoggingDecimation = 2
+    DataLogging = off
+    DataLoggingVariableName = ScopeData1
+    DataLoggingSaveFormat = Dataset
+
+simulation_actualrover_FIXED/Scope2
+    OpenAtSimulationStart = off
+    DisplayFullPath = off
+    NumInputPorts = 1
+    LayoutDimensionsString = [1, 1]
+    SampleTime = -1
+    FrameBasedProcessingString = Elements as channels (sample based)
+    MaximizeAxes = Off
+    AxesScaling = Manual
+    AxesScalingNumUpdates = 10
+    TimeSpan = Auto
+    TimeSpanOverrunAction = Wrap
+    TimeUnits = None
+    TimeDisplayOffset = 0
+    TimeAxisLabels = Bottom displays only
+    ShowTimeAxisLabel = off
+    ActiveDisplayString = 1
+    Title = %<SignalLabel>
+    ShowLegend = off
+    ShowGrid = on
+    PlotAsMagnitudePhase = off
+    ActiveDisplayYMinimum = -3246.9498924565214
+    ActiveDisplayYMaximum = 1523.1067491552076
+    YLabel = 
+    DataLoggingLimitDataPoints = off
+    DataLoggingMaxPoints = 5000
+    DataLoggingDecimateData = off
+    DataLoggingDecimation = 2
+    DataLogging = off
+    DataLoggingVariableName = ScopeData2
+    DataLoggingSaveFormat = Dataset
+
+simulation_actualrover_FIXED/Scope3
+    OpenAtSimulationStart = off
+    DisplayFullPath = off
+    NumInputPorts = 1
+    LayoutDimensionsString = [1, 1]
+    SampleTime = -1
+    FrameBasedProcessingString = Elements as channels (sample based)
+    MaximizeAxes = Off
+    AxesScaling = Manual
+    AxesScalingNumUpdates = 10
+    TimeSpan = Auto
+    TimeSpanOverrunAction = Wrap
+    TimeUnits = None
+    TimeDisplayOffset = 0
+    TimeAxisLabels = Bottom displays only
+    ShowTimeAxisLabel = off
+    ActiveDisplayString = 1
+    Title = %<SignalLabel>
+    ShowLegend = off
+    ShowGrid = on
+    PlotAsMagnitudePhase = off
+    ActiveDisplayYMinimum = -657.38536754926417
+    ActiveDisplayYMaximum = 375.18534427811085
+    YLabel = 
+    DataLoggingLimitDataPoints = off
+    DataLoggingMaxPoints = 5000
+    DataLoggingDecimateData = off
+    DataLoggingDecimation = 2
+    DataLogging = off
+    DataLoggingVariableName = ScopeData3
+    DataLoggingSaveFormat = Dataset
+
+simulation_actualrover_FIXED/Scope4
+    OpenAtSimulationStart = off
+    DisplayFullPath = off
+    NumInputPorts = 1
+    LayoutDimensionsString = [1, 1]
+    SampleTime = -1
+    FrameBasedProcessingString = Elements as channels (sample based)
+    MaximizeAxes = Off
+    AxesScaling = Manual
+    AxesScalingNumUpdates = 10
+    TimeSpan = Auto
+    TimeSpanOverrunAction = Wrap
+    TimeUnits = None
+    TimeDisplayOffset = 0
+    TimeAxisLabels = Bottom displays only
+    ShowTimeAxisLabel = off
+    ActiveDisplayString = 1
+    Title = %<SignalLabel>
+    ShowLegend = off
+    ShowGrid = on
+    PlotAsMagnitudePhase = off
+    ActiveDisplayYMinimum = -10
+    ActiveDisplayYMaximum = 10
+    YLabel = 
+    DataLoggingLimitDataPoints = off
+    DataLoggingMaxPoints = 5000
+    DataLoggingDecimateData = off
+    DataLoggingDecimation = 2
+    DataLogging = off
+    DataLoggingVariableName = ScopeData4
+    DataLoggingSaveFormat = Dataset
+
+simulation_actualrover_FIXED/Scope5
+    OpenAtSimulationStart = off
+    DisplayFullPath = off
+    NumInputPorts = 1
+    LayoutDimensionsString = [1, 1]
+    SampleTime = -1
+    FrameBasedProcessingString = Elements as channels (sample based)
+    MaximizeAxes = Off
+    AxesScaling = Manual
+    AxesScalingNumUpdates = 10
+    TimeSpan = Auto
+    TimeSpanOverrunAction = Wrap
+    TimeUnits = None
+    TimeDisplayOffset = 0
+    TimeAxisLabels = Bottom displays only
+    ShowTimeAxisLabel = off
+    ActiveDisplayString = 1
+    Title = %<SignalLabel>
+    ShowLegend = off
+    ShowGrid = on
+    PlotAsMagnitudePhase = off
+    ActiveDisplayYMinimum = -3191.6289535075152
+    ActiveDisplayYMaximum = 1816.9305201847988
+    YLabel = 
+    DataLoggingLimitDataPoints = off
+    DataLoggingMaxPoints = 5000
+    DataLoggingDecimateData = off
+    DataLoggingDecimation = 2
+    DataLogging = off
+    DataLoggingVariableName = ScopeData5
+    DataLoggingSaveFormat = Dataset
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_input
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    NoiseDistribution = none
+    NoiseParameters = []
+    Unit = m
+    AffineConversion = off
+    FilteringAndDerivatives = filter
+    SimscapeFilterOrder = 2
+    InputFilterTimeConstant = 0.001
+    UdotUserProvided = 0
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/input0
+    Port = 1
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = double
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = m
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input0
+    Port = 1
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input1
+    Port = 2
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/EVAL_KEY/input2
+    Port = 3
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter/output
+    Port = 1
+    Side = Right
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2
+    PhysicalDomain = network_engine_domain
+    SubClassName = ps_input
+    LeftPortType = input
+    RightPortType = output
+    PseudoPeriodic = off
+    Frequencies = []
+    NoiseDistribution = none
+    NoiseParameters = []
+    Unit = m
+    AffineConversion = off
+    FilteringAndDerivatives = filter
+    SimscapeFilterOrder = 2
+    InputFilterTimeConstant = 0.001
+    UdotUserProvided = 0
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/input0
+    Port = 1
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = double
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = m
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input0
+    Port = 1
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input1
+    Port = 2
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/EVAL_KEY/input2
+    Port = 3
+    IconDisplay = Port number
+    OutputFunctionCall = off
+    OutMin = []
+    OutMax = []
+    OutDataTypeStr = Inherit: auto
+    LockScale = off
+    BusOutputAsStruct = off
+    BusVirtuality = inherit
+    Unit = inherit
+    PortDimensions = -1
+    VarSizeSig = Inherit
+    SampleTime = -1
+    SignalType = auto
+    LatchByDelayingOutsideSignal = off
+    LatchInputForFeedbackSignals = off
+    Interpolate = on
+    InputConnect = 
+    DataMode = inherit
+    MessageQueueUseDefaultAttributes = on
+    MessageQueueCapacity = 1
+    MessageQueueType = LIFO
+    MessageQueueOverwriting = on
+    EventTriggers = 
+    ExecSpecEvents = []
+
+simulation_actualrover_FIXED/Simulink-PS
+Converter2/output
+    Port = 1
+    Side = Right
+    ConnectionType = Inherit: auto
+    SampleTime = -1
+
+simulation_actualrover_FIXED/Solver
+Configuration
+    PhysicalDomain = network_engine_domain
+    SubClassName = solver
+    LeftPortType = input
+    RightPortType = generic
+    Tones = []
+    Harmonics = []
+    SimulateNoise = off
+    IndexReductionMethod = DerivativeReplacement
+    DoDC = off
+    ResidualTolerance = 1e-09
+    ConsistencyTolSource = GLOBAL
+    ConsistencyAbsTol = 0.001
+    ConsistencyRelTol = 0.001
+    ConsistencyTolFactor = 0.001
+    UseLocalSolver = off
+    LocalSolverChoice = NE_BACKWARD_EULER_ADVANCER
+    ResolveIndetEquations = on
+    FunctionEvalNumThread = 1
+    LocalSolverSampleTime = 0.001
+    DoFixedCost = off
+    MaxNonlinIter = 3
+    MaxModeIter = 2
+    ComputeImpulses = off
+    ImpulseIterations = 2
+    LinearAlgebra = auto
+    LinearAlgebraNumThread = 0
+    EquationFormulation = NE_TIME_EF
+    DelaysMemoryBudget = 1024
+    AutomaticFiltering = on
+    FilteringTimeConstant = 0.001
+    PartitionStorageMethod = AS_NEEDED
+    PartitionMemoryBudget = 1024
+    PartitionMethod = ROBUST
+    MultibodyUseLocalSolver = off
+    MultibodyLocalSolverChoice = ODE1
+    MultibodyLocalSolverSampleTime = 0.001
+
+simulation_actualrover_FIXED/Solver
+Configuration/EVAL_KEY
+    SubClassName = eval_key
+
+simulation_actualrover_FIXED/Solver
+Configuration/port
+    Port = 1
+    Side = Right
+    ConnectionType = Inherit: auto
+    SampleTime = UseLocalSolver * LocalSolverSampleTime - (~UseLocalSolver)
+
+simulation_actualrover_FIXED/Spherical Solid
+    SphereRadius = 1
+    SphereRadius_conf = compiletime
+    SphereRadiusUnits = cm
+    ExportEntireGeometry = off
+    InertiaType = CalculateFromGeometry
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 1
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = on
+    SerializedFrames = <Frames><Frame><Id>Frame1</Id><Value><Name>F1</Name><Origin><Source>ReferenceFrame</Source><FeatureName></FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame></Frames>
+    BlockFunction = simmechanics.library.body_elements.spherical_solid
+
+simulation_actualrover_FIXED/Spherical Solid1
+    SphereRadius = 1
+    SphereRadius_conf = compiletime
+    SphereRadiusUnits = cm
+    ExportEntireGeometry = off
+    InertiaType = CalculateFromGeometry
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 1
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = on
+    SerializedFrames = <Frames><Frame><Id>Frame1</Id><Value><Name>F1</Name><Origin><Source>ReferenceFrame</Source><FeatureName></FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame></Frames>
+    BlockFunction = simmechanics.library.body_elements.spherical_solid
+
+simulation_actualrover_FIXED/Spring 1
+    NaturalLength = 0.2528
+    NaturalLength_conf = compiletime
+    NaturalLengthUnits = m
+    SpringStiffness = k
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = c
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    SenseForce = on
+    BlockFunction = simmechanics.library.forces_torques.spring_damper_force
+
+simulation_actualrover_FIXED/Spring 2
+    NaturalLength = 0.2528
+    NaturalLength_conf = compiletime
+    NaturalLengthUnits = m
+    SpringStiffness = k
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = c
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    SenseForce = on
+    BlockFunction = simmechanics.library.forces_torques.spring_damper_force
+
+simulation_actualrover_FIXED/Spring and
+Damper Force
+    NaturalLength = 0.22
+    NaturalLength_conf = compiletime
+    NaturalLengthUnits = m
+    SpringStiffness = k_up
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = c_up
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    SenseForce = off
+    BlockFunction = simmechanics.library.forces_torques.spring_damper_force
+
+simulation_actualrover_FIXED/Spring and
+Damper Force1
+    NaturalLength =  L0_tpu1
+    NaturalLength_conf = compiletime
+    NaturalLengthUnits = m
+    SpringStiffness = k_tpu
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = c_tpu
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    SenseForce = off
+    BlockFunction = simmechanics.library.forces_torques.spring_damper_force
+
+simulation_actualrover_FIXED/Spring and
+Damper Force2
+    NaturalLength = 0.22
+    NaturalLength_conf = compiletime
+    NaturalLengthUnits = m
+    SpringStiffness = k_up
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = c_up
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    SenseForce = off
+    BlockFunction = simmechanics.library.forces_torques.spring_damper_force
+
+simulation_actualrover_FIXED/Spring and
+Damper Force4
+    NaturalLength =  L0_tpu2
+    NaturalLength_conf = compiletime
+    NaturalLengthUnits = m
+    SpringStiffness = k_tpu
+    SpringStiffness_conf = compiletime
+    SpringStiffnessUnits = N/m
+    DampingCoefficient = c_tpu
+    DampingCoefficient_conf = compiletime
+    DampingCoefficientUnits = N/(m/s)
+    SenseForce = off
+    BlockFunction = simmechanics.library.forces_torques.spring_damper_force
+
+simulation_actualrover_FIXED/To Workspace
+    VariableName = tpu_gap2
+    MaxDataPoints = inf
+    Decimation = 1
+    SaveFormat = Array
+    Save2DSignal = 3-D array (concatenate along third dimension)
+    FixptAsFi = on
+    SampleTime = -1
+
+simulation_actualrover_FIXED/To Workspace1
+    VariableName = tpu_gap1
+    MaxDataPoints = inf
+    Decimation = 1
+    SaveFormat = Array
+    Save2DSignal = 3-D array (concatenate along third dimension)
+    FixptAsFi = on
+    SampleTime = -1
+
+simulation_actualrover_FIXED/Transform
+Sensor1
+    MeasurementFrame = World
+    RotationSequence = XYX
+    SenseAngle = off
+    SenseAxis = off
+    SenseQ = off
+    SenseR = off
+    SenseRotationSequence = off
+    SenseOmegaX = off
+    SenseOmegaY = off
+    SenseOmegaZ = off
+    SenseOmega = off
+    SenseQDot = off
+    SenseRDot = off
+    SenseRotationSequenceDot = off
+    SenseAlphaX = off
+    SenseAlphaY = off
+    SenseAlphaZ = off
+    SenseAlpha = off
+    SenseQDDot = off
+    SenseRDDot = off
+    SenseX = off
+    SenseY = off
+    SenseZ = off
+    SenseXYZ = off
+    SenseRad = off
+    SenseAzim = off
+    SenseDist = on
+    SenseInc = off
+    SenseXDot = off
+    SenseYDot = off
+    SenseZDot = off
+    SenseXYZDot = off
+    SenseRadDot = off
+    SenseAzimDot = off
+    SenseDistDot = off
+    SenseIncDot = off
+    SenseXDDot = off
+    SenseYDDot = off
+    SenseZDDot = off
+    SenseXYZDDot = off
+    SenseRadDDot = off
+    SenseAzimDDot = off
+    SenseDistDDot = off
+    SenseIncDDot = off
+    BlockFunction = simmechanics.library.frames_transforms.transform_sensor
+
+simulation_actualrover_FIXED/Transform
+Sensor2
+    MeasurementFrame = World
+    RotationSequence = XYX
+    SenseAngle = off
+    SenseAxis = off
+    SenseQ = off
+    SenseR = off
+    SenseRotationSequence = off
+    SenseOmegaX = off
+    SenseOmegaY = off
+    SenseOmegaZ = off
+    SenseOmega = off
+    SenseQDot = off
+    SenseRDot = off
+    SenseRotationSequenceDot = off
+    SenseAlphaX = off
+    SenseAlphaY = off
+    SenseAlphaZ = off
+    SenseAlpha = off
+    SenseQDDot = off
+    SenseRDDot = off
+    SenseX = off
+    SenseY = off
+    SenseZ = off
+    SenseXYZ = off
+    SenseRad = off
+    SenseAzim = off
+    SenseDist = on
+    SenseInc = off
+    SenseXDot = off
+    SenseYDot = off
+    SenseZDot = off
+    SenseXYZDot = off
+    SenseRadDot = off
+    SenseAzimDot = off
+    SenseDistDot = off
+    SenseIncDot = off
+    SenseXDDot = off
+    SenseYDDot = off
+    SenseZDDot = off
+    SenseXYZDDot = off
+    SenseRadDDot = off
+    SenseAzimDDot = off
+    SenseDistDDot = off
+    SenseIncDDot = off
+    BlockFunction = simmechanics.library.frames_transforms.transform_sensor
+
+simulation_actualrover_FIXED/Weld Joint
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    BlockFunction = simmechanics.library.joints.weld_joint
+
+simulation_actualrover_FIXED/Weld Joint1
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    BlockFunction = simmechanics.library.joints.weld_joint
+
+simulation_actualrover_FIXED/Weld Joint3
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    BlockFunction = simmechanics.library.joints.weld_joint
+
+simulation_actualrover_FIXED/Weld Joint4
+    JointMode = Normal
+    CompositeWrenchDir = FollowerOnBase
+    CompositeWrenchFrame = BaseFrame
+    SenseConstraintForce = off
+    SenseConstraintTorque = off
+    SenseTotalForce = off
+    SenseTotalTorque = off
+    BlockFunction = simmechanics.library.joints.weld_joint
+
+simulation_actualrover_FIXED/World Frame
+    BlockFunction = simmechanics.library.frames_transforms.world_frame
+
+simulation_actualrover_FIXED/link3_angle
+    VariableName = link3_angle
+    MaxDataPoints = inf
+    Decimation = 1
+    SaveFormat = Array
+    Save2DSignal = 3-D array (concatenate along third dimension)
+    FixptAsFi = on
+    SampleTime = -1
+
+simulation_actualrover_FIXED/wheel 1
+    BrickDimensions = [10,10,5]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = cm
+    ExportEntireGeometry = off
+    InertiaType = Custom
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 4
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = off
+    SerializedFrames = <Frames><Frame><Id>Frame1</Id><Value><Name>F1</Name><Origin><Source>GeometricFeature</Source><FeatureName>+z surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame><Frame><Id>Frame2</Id><Value><Name>F2</Name><Origin><Source>GeometricFeature</Source><FeatureName>-z surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame></Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
+
+simulation_actualrover_FIXED/wheel 2
+    BrickDimensions = [10,10,5]
+    BrickDimensions_conf = compiletime
+    BrickDimensionsUnits = cm
+    ExportEntireGeometry = off
+    InertiaType = Custom
+    BasedOnType = Density
+    Density = 1000
+    Density_conf = compiletime
+    DensityUnits = kg/m^3
+    Mass = 4
+    Mass_conf = compiletime
+    MassUnits = kg
+    CenterOfMass = [0 0 0]
+    CenterOfMass_conf = compiletime
+    CenterOfMassUnits = m
+    MomentsOfInertia = [1 1 1]
+    MomentsOfInertia_conf = compiletime
+    MomentsOfInertiaUnits = kg*m^2
+    ProductsOfInertia = [0 0 0]
+    ProductsOfInertia_conf = compiletime
+    ProductsOfInertiaUnits = kg*m^2
+    GraphicType = FromGeometry
+    MarkerShape = Sphere
+    MarkerSize = 10
+    MarkerSize_conf = compiletime
+    GraphicVisPropType = SimpleVisualProperties
+    GraphicDiffuseColor = [0.5 0.5 0.5]
+    GraphicDiffuseColor_conf = compiletime
+    GraphicOpacity = 1
+    GraphicOpacity_conf = compiletime
+    GraphicSpecularColor = [0.5 0.5 0.5 1.0]
+    GraphicSpecularColor_conf = compiletime
+    GraphicAmbientColor = [0.15 0.15 0.15 1.0]
+    GraphicAmbientColor_conf = compiletime
+    GraphicEmissiveColor = [0.0 0.0 0.0 1.0]
+    GraphicEmissiveColor_conf = compiletime
+    GraphicShininess = 75
+    GraphicShininess_conf = compiletime
+    DoExposeReferenceFrame = off
+    SerializedFrames = <Frames><Frame><Id>Frame1</Id><Value><Name>F1</Name><Origin><Source>GeometricFeature</Source><FeatureName>+z surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame><Frame><Id>Frame2</Id><Value><Name>F2</Name><Origin><Source>GeometricFeature</Source><FeatureName>-z surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame></Frames>
+    BlockFunction = simmechanics.library.body_elements.brick_solid
