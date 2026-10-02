@@ -1,0 +1,2222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, -7, 1536, 912]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">80</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">69</P>
+  <Block BlockType="Reference" Name="Arm 1 end transformation for spring" SID="61">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[145, -20, 185, 20]</P>
+    <P Name="ZOrder">56</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_61"/>
+      <P Name="RotationMethod">None</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">0</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">None</P>
+      <P Name="TranslationCartesianOffset">[0 0 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Arm 2" SID="56">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[-55, 480, -15, 520]</P>
+    <P Name="ZOrder">52</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="SourceType">Brick Solid</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_56"/>
+      <P Name="BrickDimensions">[0.255,0.10,0.05]</P>
+      <P Name="BrickDimensions_conf">compiletime</P>
+      <P Name="BrickDimensionsUnits">m</P>
+      <P Name="ExportEntireGeometry">off</P>
+      <P Name="InertiaType">CalculateFromGeometry</P>
+      <P Name="BasedOnType">Mass</P>
+      <P Name="Density">2.7</P>
+      <P Name="Density_conf">compiletime</P>
+      <P Name="DensityUnits">g/cm^3</P>
+      <P Name="Mass">1</P>
+      <P Name="Mass_conf">compiletime</P>
+      <P Name="MassUnits">kg</P>
+      <P Name="CenterOfMass">[0 0 0]</P>
+      <P Name="CenterOfMass_conf">compiletime</P>
+      <P Name="CenterOfMassUnits">m</P>
+      <P Name="MomentsOfInertia">[1 1 1]</P>
+      <P Name="MomentsOfInertia_conf">compiletime</P>
+      <P Name="MomentsOfInertiaUnits">kg*m^2</P>
+      <P Name="ProductsOfInertia">[0 0 0]</P>
+      <P Name="ProductsOfInertia_conf">compiletime</P>
+      <P Name="ProductsOfInertiaUnits">kg*m^2</P>
+      <P Name="GraphicType">FromGeometry</P>
+      <P Name="MarkerShape">Sphere</P>
+      <P Name="MarkerSize">10</P>
+      <P Name="MarkerSize_conf">compiletime</P>
+      <P Name="GraphicVisPropType">SimpleVisualProperties</P>
+      <P Name="GraphicDiffuseColor">[0.5 0.5 0.5]</P>
+      <P Name="GraphicDiffuseColor_conf">compiletime</P>
+      <P Name="GraphicOpacity">1</P>
+      <P Name="GraphicOpacity_conf">compiletime</P>
+      <P Name="GraphicSpecularColor">[0.5 0.5 0.5 1.0]</P>
+      <P Name="GraphicSpecularColor_conf">compiletime</P>
+      <P Name="GraphicAmbientColor">[0.15 0.15 0.15 1.0]</P>
+      <P Name="GraphicAmbientColor_conf">compiletime</P>
+      <P Name="GraphicEmissiveColor">[0.0 0.0 0.0 1.0]</P>
+      <P Name="GraphicEmissiveColor_conf">compiletime</P>
+      <P Name="GraphicShininess">75</P>
+      <P Name="GraphicShininess_conf">compiletime</P>
+      <P Name="DoExposeReferenceFrame">off</P>
+      <P Name="SerializedFrames">
+&lt;Frames&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame1&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F1&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;-z +x curve&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame2&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F2&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;-x surface&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+&lt;/Frames&gt;</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">Frame1</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">Frame2</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Arm 2 end transform for spring" SID="60">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[50, 540, 90, 580]</P>
+    <P Name="ZOrder">55</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_60"/>
+      <P Name="RotationMethod">None</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">0</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">None</P>
+      <P Name="TranslationCartesianOffset">[0 0 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Arm1 " SID="57">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[-55, 15, -15, 55]</P>
+    <P Name="ZOrder">53</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="SourceType">Brick Solid</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_57"/>
+      <P Name="BrickDimensions">[0.255,0.10,0.05]</P>
+      <P Name="BrickDimensions_conf">compiletime</P>
+      <P Name="BrickDimensionsUnits">m</P>
+      <P Name="ExportEntireGeometry">off</P>
+      <P Name="InertiaType">CalculateFromGeometry</P>
+      <P Name="BasedOnType">Mass</P>
+      <P Name="Density">1</P>
+      <P Name="Density_conf">compiletime</P>
+      <P Name="DensityUnits">kg/m^3</P>
+      <P Name="Mass">1</P>
+      <P Name="Mass_conf">compiletime</P>
+      <P Name="MassUnits">kg</P>
+      <P Name="CenterOfMass">[0 0 0]</P>
+      <P Name="CenterOfMass_conf">compiletime</P>
+      <P Name="CenterOfMassUnits">m</P>
+      <P Name="MomentsOfInertia">[1 1 1]</P>
+      <P Name="MomentsOfInertia_conf">compiletime</P>
+      <P Name="MomentsOfInertiaUnits">kg*m^2</P>
+      <P Name="ProductsOfInertia">[0 0 0]</P>
+      <P Name="ProductsOfInertia_conf">compiletime</P>
+      <P Name="ProductsOfInertiaUnits">kg*m^2</P>
+      <P Name="GraphicType">FromGeometry</P>
+      <P Name="MarkerShape">Sphere</P>
+      <P Name="MarkerSize">10</P>
+      <P Name="MarkerSize_conf">compiletime</P>
+      <P Name="GraphicVisPropType">SimpleVisualProperties</P>
+      <P Name="GraphicDiffuseColor">[0.5 0.5 0.5]</P>
+      <P Name="GraphicDiffuseColor_conf">compiletime</P>
+      <P Name="GraphicOpacity">1</P>
+      <P Name="GraphicOpacity_conf">compiletime</P>
+      <P Name="GraphicSpecularColor">[0.5 0.5 0.5 1.0]</P>
+      <P Name="GraphicSpecularColor_conf">compiletime</P>
+      <P Name="GraphicAmbientColor">[0.15 0.15 0.15 1.0]</P>
+      <P Name="GraphicAmbientColor_conf">compiletime</P>
+      <P Name="GraphicEmissiveColor">[0.0 0.0 0.0 1.0]</P>
+      <P Name="GraphicEmissiveColor_conf">compiletime</P>
+      <P Name="GraphicShininess">75</P>
+      <P Name="GraphicShininess_conf">compiletime</P>
+      <P Name="DoExposeReferenceFrame">off</P>
+      <P Name="SerializedFrames">
+&lt;Frames&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame1&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F1&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;-z +x curve&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame2&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F2&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;-x surface&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+&lt;/Frames&gt;</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">Frame1</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">Frame2</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Chassis" SID="11">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[760, 225, 800, 265]</P>
+    <P Name="ZOrder">20</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="SourceType">Brick Solid</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_11"/>
+      <P Name="BrickDimensions">[0.14, 0.43, 0.424]</P>
+      <P Name="BrickDimensions_conf">compiletime</P>
+      <P Name="BrickDimensionsUnits">m</P>
+      <P Name="ExportEntireGeometry">off</P>
+      <P Name="InertiaType">Custom</P>
+      <P Name="BasedOnType">Density</P>
+      <P Name="Density">1000</P>
+      <P Name="Density_conf">compiletime</P>
+      <P Name="DensityUnits">kg/m^3</P>
+      <P Name="Mass">24</P>
+      <P Name="Mass_conf">compiletime</P>
+      <P Name="MassUnits">kg</P>
+      <P Name="CenterOfMass">[200 0. 0]</P>
+      <P Name="CenterOfMass_conf">compiletime</P>
+      <P Name="CenterOfMassUnits">mm</P>
+      <P Name="MomentsOfInertia">[1 1 1]</P>
+      <P Name="MomentsOfInertia_conf">compiletime</P>
+      <P Name="MomentsOfInertiaUnits">kg*m^2</P>
+      <P Name="ProductsOfInertia">[0 0 0]</P>
+      <P Name="ProductsOfInertia_conf">compiletime</P>
+      <P Name="ProductsOfInertiaUnits">kg*m^2</P>
+      <P Name="GraphicType">FromGeometry</P>
+      <P Name="MarkerShape">Sphere</P>
+      <P Name="MarkerSize">10</P>
+      <P Name="MarkerSize_conf">compiletime</P>
+      <P Name="GraphicVisPropType">SimpleVisualProperties</P>
+      <P Name="GraphicDiffuseColor">[0.5 0.5 0.5]</P>
+      <P Name="GraphicDiffuseColor_conf">compiletime</P>
+      <P Name="GraphicOpacity">1</P>
+      <P Name="GraphicOpacity_conf">compiletime</P>
+      <P Name="GraphicSpecularColor">[0.5 0.5 0.5 1.0]</P>
+      <P Name="GraphicSpecularColor_conf">compiletime</P>
+      <P Name="GraphicAmbientColor">[0.15 0.15 0.15 1.0]</P>
+      <P Name="GraphicAmbientColor_conf">compiletime</P>
+      <P Name="GraphicEmissiveColor">[0.0 0.0 0.0 1.0]</P>
+      <P Name="GraphicEmissiveColor_conf">compiletime</P>
+      <P Name="GraphicShininess">75</P>
+      <P Name="GraphicShininess_conf">compiletime</P>
+      <P Name="DoExposeReferenceFrame">on</P>
+      <P Name="SerializedFrames">
+&lt;Frames&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame1&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F1&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;+y surface&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+&lt;/Frames&gt;</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">Frame1</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">R</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Chassis Pivot transform" SID="13">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[465, 290, 505, 330]</P>
+    <P Name="ZOrder">22</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_13"/>
+      <P Name="RotationMethod">StandardAxis</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Y</P>
+      <P Name="RotationAngle">90</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">StandardAxis</P>
+      <P Name="TranslationCartesianOffset">[0 0 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Y</P>
+      <P Name="TranslationStandardOffset">0.13</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">cm</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Chassis pivot" SID="14">
+    <PortCounts lconn="1" rconn="3"/>
+    <P Name="Position">[900, 290, 940, 330]</P>
+    <P Name="ZOrder">23</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Joints/Revolute Joint</P>
+    <P Name="SourceType">Revolute Joint</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_14"/>
+      <P Name="JointMode">Normal</P>
+      <P Name="CompositeWrenchDir">FollowerOnBase</P>
+      <P Name="CompositeWrenchFrame">BaseFrame</P>
+      <P Name="SenseConstraintForce">off</P>
+      <P Name="SenseConstraintTorque">off</P>
+      <P Name="SenseTotalForce">off</P>
+      <P Name="SenseTotalTorque">off</P>
+      <P Name="PositionTargetSpecify">off</P>
+      <P Name="PositionTargetPriority">High</P>
+      <P Name="PositionTargetValue">0</P>
+      <P Name="PositionTargetValue_conf">compiletime</P>
+      <P Name="PositionTargetValueUnits">deg</P>
+      <P Name="VelocityTargetSpecify">off</P>
+      <P Name="VelocityTargetPriority">High</P>
+      <P Name="VelocityTargetValue">0</P>
+      <P Name="VelocityTargetValue_conf">compiletime</P>
+      <P Name="VelocityTargetValueUnits">deg/s</P>
+      <P Name="EquilibriumPosition">0</P>
+      <P Name="EquilibriumPosition_conf">compiletime</P>
+      <P Name="EquilibriumPositionUnits">deg</P>
+      <P Name="SpringStiffness">0</P>
+      <P Name="SpringStiffness_conf">compiletime</P>
+      <P Name="SpringStiffnessUnits">N*m/deg</P>
+      <P Name="DampingCoefficient">0</P>
+      <P Name="DampingCoefficient_conf">compiletime</P>
+      <P Name="DampingCoefficientUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitSpecify">off</P>
+      <P Name="LowerLimitBound">-90</P>
+      <P Name="LowerLimitBound_conf">compiletime</P>
+      <P Name="LowerLimitBoundUnits">deg</P>
+      <P Name="LowerLimitStiffness">1e4</P>
+      <P Name="LowerLimitStiffness_conf">compiletime</P>
+      <P Name="LowerLimitStiffnessUnits">N*m/deg</P>
+      <P Name="LowerLimitDamping">10</P>
+      <P Name="LowerLimitDamping_conf">compiletime</P>
+      <P Name="LowerLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitTransitionRegionWidth">0.1</P>
+      <P Name="LowerLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="LowerLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="UpperLimitSpecify">off</P>
+      <P Name="UpperLimitBound">90</P>
+      <P Name="UpperLimitBound_conf">compiletime</P>
+      <P Name="UpperLimitBoundUnits">deg</P>
+      <P Name="UpperLimitStiffness">1e4</P>
+      <P Name="UpperLimitStiffness_conf">compiletime</P>
+      <P Name="UpperLimitStiffnessUnits">N*m/deg</P>
+      <P Name="UpperLimitDamping">10</P>
+      <P Name="UpperLimitDamping_conf">compiletime</P>
+      <P Name="UpperLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="UpperLimitTransitionRegionWidth">0.1</P>
+      <P Name="UpperLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="UpperLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="TorqueActuationMode">NoTorque</P>
+      <P Name="MotionActuationMode">ComputedMotion</P>
+      <P Name="SensePosition">on</P>
+      <P Name="SenseVelocity">on</P>
+      <P Name="SenseAcceleration">off</P>
+      <P Name="SenseTorqueForce">off</P>
+      <P Name="SenseLowerLimitTorqueForce">off</P>
+      <P Name="SenseUpperLimitTorqueForce">off</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+      <Port Type="rconn" Index="2">
+        <P Name="PortId">q_out</P>
+      </Port>
+      <Port Type="rconn" Index="3">
+        <P Name="PortId">w_out</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Differential render pivot" SID="59">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[90, 150, 130, 190]</P>
+    <P Name="ZOrder">54</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Joints/Revolute Joint</P>
+    <P Name="SourceType">Revolute Joint</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_59"/>
+      <P Name="JointMode">Normal</P>
+      <P Name="CompositeWrenchDir">FollowerOnBase</P>
+      <P Name="CompositeWrenchFrame">BaseFrame</P>
+      <P Name="SenseConstraintForce">off</P>
+      <P Name="SenseConstraintTorque">off</P>
+      <P Name="SenseTotalForce">off</P>
+      <P Name="SenseTotalTorque">off</P>
+      <P Name="PositionTargetSpecify">off</P>
+      <P Name="PositionTargetPriority">High</P>
+      <P Name="PositionTargetValue">0</P>
+      <P Name="PositionTargetValue_conf">compiletime</P>
+      <P Name="PositionTargetValueUnits">deg</P>
+      <P Name="VelocityTargetSpecify">off</P>
+      <P Name="VelocityTargetPriority">High</P>
+      <P Name="VelocityTargetValue">0</P>
+      <P Name="VelocityTargetValue_conf">compiletime</P>
+      <P Name="VelocityTargetValueUnits">deg/s</P>
+      <P Name="EquilibriumPosition">0</P>
+      <P Name="EquilibriumPosition_conf">compiletime</P>
+      <P Name="EquilibriumPositionUnits">deg</P>
+      <P Name="SpringStiffness">0</P>
+      <P Name="SpringStiffness_conf">compiletime</P>
+      <P Name="SpringStiffnessUnits">N*m/deg</P>
+      <P Name="DampingCoefficient">0</P>
+      <P Name="DampingCoefficient_conf">compiletime</P>
+      <P Name="DampingCoefficientUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitSpecify">off</P>
+      <P Name="LowerLimitBound">-90</P>
+      <P Name="LowerLimitBound_conf">compiletime</P>
+      <P Name="LowerLimitBoundUnits">deg</P>
+      <P Name="LowerLimitStiffness">1e4</P>
+      <P Name="LowerLimitStiffness_conf">compiletime</P>
+      <P Name="LowerLimitStiffnessUnits">N*m/deg</P>
+      <P Name="LowerLimitDamping">10</P>
+      <P Name="LowerLimitDamping_conf">compiletime</P>
+      <P Name="LowerLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitTransitionRegionWidth">0.1</P>
+      <P Name="LowerLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="LowerLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="UpperLimitSpecify">off</P>
+      <P Name="UpperLimitBound">90</P>
+      <P Name="UpperLimitBound_conf">compiletime</P>
+      <P Name="UpperLimitBoundUnits">deg</P>
+      <P Name="UpperLimitStiffness">1e4</P>
+      <P Name="UpperLimitStiffness_conf">compiletime</P>
+      <P Name="UpperLimitStiffnessUnits">N*m/deg</P>
+      <P Name="UpperLimitDamping">10</P>
+      <P Name="UpperLimitDamping_conf">compiletime</P>
+      <P Name="UpperLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="UpperLimitTransitionRegionWidth">0.1</P>
+      <P Name="UpperLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="UpperLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="TorqueActuationMode">NoTorque</P>
+      <P Name="MotionActuationMode">ComputedMotion</P>
+      <P Name="SensePosition">off</P>
+      <P Name="SenseVelocity">off</P>
+      <P Name="SenseAcceleration">off</P>
+      <P Name="SenseTorqueForce">off</P>
+      <P Name="SenseLowerLimitTorqueForce">off</P>
+      <P Name="SenseUpperLimitTorqueForce">off</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Differential render pivot transform" SID="55">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[50, 240, 90, 280]</P>
+    <P Name="ZOrder">51</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_55"/>
+      <P Name="RotationMethod">StandardAxis</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+X</P>
+      <P Name="RotationAngle">-90</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">StandardAxis</P>
+      <P Name="TranslationCartesianOffset">[0 0 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Y</P>
+      <P Name="TranslationStandardOffset">0.05</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Mechanism&#xA;Configuration" SID="9">
+    <PortCounts rconn="1"/>
+    <P Name="Position">[180, 420, 220, 460]</P>
+    <P Name="ZOrder">18</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Utilities/Mechanism
+Configuration</P>
+    <P Name="SourceType">Mechanism
+Configuration</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_9"/>
+      <P Name="UniformGravity">Constant</P>
+      <P Name="GravityVector">[0 0 -9.80665]</P>
+      <P Name="GravityVector_conf">compiletime</P>
+      <P Name="GravityVectorUnits">m/s^2</P>
+      <P Name="LinearizationDelta">0.001</P>
+      <P Name="JointModeTransitionNonlinearIterations">2</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">C</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter" SID="15">
+    <PortCounts out="1" lconn="1"/>
+    <P Name="Position">[995, 302, 1010, 318]</P>
+    <P Name="ZOrder">24</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="VectorFormat">inherit</P>
+      <P Name="Unit">inherit</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter1" SID="16">
+    <PortCounts out="1" lconn="1"/>
+    <P Name="Position">[995, 317, 1010, 333]</P>
+    <P Name="ZOrder">25</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="VectorFormat">inherit</P>
+      <P Name="Unit">inherit</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter2" SID="29">
+    <PortCounts out="1" lconn="1"/>
+    <P Name="Position">[700, -18, 715, -2]</P>
+    <P Name="ZOrder">38</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="VectorFormat">inherit</P>
+      <P Name="Unit">inherit</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter3" SID="30">
+    <PortCounts out="1" lconn="1"/>
+    <P Name="Position">[700, 72, 715, 88]</P>
+    <P Name="ZOrder">39</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="VectorFormat">inherit</P>
+      <P Name="Unit">inherit</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter4" SID="31">
+    <PortCounts out="1" lconn="1"/>
+    <P Name="Position">[700, 492, 715, 508]</P>
+    <P Name="ZOrder">40</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="VectorFormat">inherit</P>
+      <P Name="Unit">inherit</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter5" SID="32">
+    <PortCounts out="1" lconn="1"/>
+    <P Name="Position">[700, 602, 715, 618]</P>
+    <P Name="ZOrder">41</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="VectorFormat">inherit</P>
+      <P Name="Unit">inherit</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Pivot to Arm 1 Transform" SID="68">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[215, 90, 255, 130]</P>
+    <P Name="ZOrder">63</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_68"/>
+      <P Name="RotationMethod">RotationSequence</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+X</P>
+      <P Name="RotationAngle">90</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYZ</P>
+      <P Name="RotationSequenceAngles">[0,180,120]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">None</P>
+      <P Name="TranslationCartesianOffset">[0 0 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Pivot to Arm 2 Transform" SID="69">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[70, 390, 110, 430]</P>
+    <P Name="ZOrder">64</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_69"/>
+      <P Name="RotationMethod">RotationSequence</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">30</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYZ</P>
+      <P Name="RotationSequenceAngles">[180 0 60]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">None</P>
+      <P Name="TranslationCartesianOffset">[0 0 0]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 1" SID="25">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[285, 540, 325, 580]</P>
+    <P Name="ZOrder">34</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="SourceType">Brick Solid</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_25"/>
+      <P Name="BrickDimensions">[5,72,5]</P>
+      <P Name="BrickDimensions_conf">compiletime</P>
+      <P Name="BrickDimensionsUnits">cm</P>
+      <P Name="ExportEntireGeometry">off</P>
+      <P Name="InertiaType">Custom</P>
+      <P Name="BasedOnType">Density</P>
+      <P Name="Density">1000</P>
+      <P Name="Density_conf">compiletime</P>
+      <P Name="DensityUnits">kg/m^3</P>
+      <P Name="Mass">2</P>
+      <P Name="Mass_conf">compiletime</P>
+      <P Name="MassUnits">kg</P>
+      <P Name="CenterOfMass">[0 0 0]</P>
+      <P Name="CenterOfMass_conf">compiletime</P>
+      <P Name="CenterOfMassUnits">m</P>
+      <P Name="MomentsOfInertia">[1 1 1]</P>
+      <P Name="MomentsOfInertia_conf">compiletime</P>
+      <P Name="MomentsOfInertiaUnits">kg*m^2</P>
+      <P Name="ProductsOfInertia">[0 0 0]</P>
+      <P Name="ProductsOfInertia_conf">compiletime</P>
+      <P Name="ProductsOfInertiaUnits">kg*m^2</P>
+      <P Name="GraphicType">FromGeometry</P>
+      <P Name="MarkerShape">Sphere</P>
+      <P Name="MarkerSize">10</P>
+      <P Name="MarkerSize_conf">compiletime</P>
+      <P Name="GraphicVisPropType">SimpleVisualProperties</P>
+      <P Name="GraphicDiffuseColor">[0.5 0.5 0.5]</P>
+      <P Name="GraphicDiffuseColor_conf">compiletime</P>
+      <P Name="GraphicOpacity">1</P>
+      <P Name="GraphicOpacity_conf">compiletime</P>
+      <P Name="GraphicSpecularColor">[0.5 0.5 0.5 1.0]</P>
+      <P Name="GraphicSpecularColor_conf">compiletime</P>
+      <P Name="GraphicAmbientColor">[0.15 0.15 0.15 1.0]</P>
+      <P Name="GraphicAmbientColor_conf">compiletime</P>
+      <P Name="GraphicEmissiveColor">[0.0 0.0 0.0 1.0]</P>
+      <P Name="GraphicEmissiveColor_conf">compiletime</P>
+      <P Name="GraphicShininess">75</P>
+      <P Name="GraphicShininess_conf">compiletime</P>
+      <P Name="DoExposeReferenceFrame">on</P>
+      <P Name="SerializedFrames">
+&lt;Frames&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame1&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F1&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;+x +y +z point&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+&lt;/Frames&gt;</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">Frame1</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">R</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 1 Pivot transform" SID="6">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[465, 395, 505, 435]</P>
+    <P Name="ZOrder">15</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_6"/>
+      <P Name="RotationMethod">StandardAxis</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Y</P>
+      <P Name="RotationAngle">90</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">Cartesian</P>
+      <P Name="TranslationCartesianOffset">[-34.5,-12.5,-8]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">cm</P>
+      <P Name="TranslationStandardAxis">+Y</P>
+      <P Name="TranslationStandardOffset">34.5</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">cm</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 1 end transform" SID="2">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[420, 580, 460, 620]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_2"/>
+      <P Name="RotationMethod">None</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">0</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">None</P>
+      <P Name="TranslationCartesianOffset">[0.05, 0, -0.15]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationStandardOffset">-0.15</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 1 pivot" SID="4">
+    <PortCounts lconn="2" rconn="2"/>
+    <P Name="Position">[580, 470, 620, 510]</P>
+    <P Name="ZOrder">13</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Joints/Revolute Joint</P>
+    <P Name="SourceType">Revolute Joint</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_4"/>
+      <P Name="JointMode">Normal</P>
+      <P Name="CompositeWrenchDir">FollowerOnBase</P>
+      <P Name="CompositeWrenchFrame">BaseFrame</P>
+      <P Name="SenseConstraintForce">off</P>
+      <P Name="SenseConstraintTorque">off</P>
+      <P Name="SenseTotalForce">off</P>
+      <P Name="SenseTotalTorque">off</P>
+      <P Name="PositionTargetSpecify">off</P>
+      <P Name="PositionTargetPriority">High</P>
+      <P Name="PositionTargetValue">0</P>
+      <P Name="PositionTargetValue_conf">compiletime</P>
+      <P Name="PositionTargetValueUnits">deg</P>
+      <P Name="VelocityTargetSpecify">off</P>
+      <P Name="VelocityTargetPriority">High</P>
+      <P Name="VelocityTargetValue">0</P>
+      <P Name="VelocityTargetValue_conf">compiletime</P>
+      <P Name="VelocityTargetValueUnits">deg/s</P>
+      <P Name="EquilibriumPosition">0</P>
+      <P Name="EquilibriumPosition_conf">compiletime</P>
+      <P Name="EquilibriumPositionUnits">deg</P>
+      <P Name="SpringStiffness">0</P>
+      <P Name="SpringStiffness_conf">compiletime</P>
+      <P Name="SpringStiffnessUnits">N*m/deg</P>
+      <P Name="DampingCoefficient">0</P>
+      <P Name="DampingCoefficient_conf">compiletime</P>
+      <P Name="DampingCoefficientUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitSpecify">off</P>
+      <P Name="LowerLimitBound">-90</P>
+      <P Name="LowerLimitBound_conf">compiletime</P>
+      <P Name="LowerLimitBoundUnits">deg</P>
+      <P Name="LowerLimitStiffness">1e4</P>
+      <P Name="LowerLimitStiffness_conf">compiletime</P>
+      <P Name="LowerLimitStiffnessUnits">N*m/deg</P>
+      <P Name="LowerLimitDamping">10</P>
+      <P Name="LowerLimitDamping_conf">compiletime</P>
+      <P Name="LowerLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitTransitionRegionWidth">0.1</P>
+      <P Name="LowerLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="LowerLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="UpperLimitSpecify">off</P>
+      <P Name="UpperLimitBound">90</P>
+      <P Name="UpperLimitBound_conf">compiletime</P>
+      <P Name="UpperLimitBoundUnits">deg</P>
+      <P Name="UpperLimitStiffness">1e4</P>
+      <P Name="UpperLimitStiffness_conf">compiletime</P>
+      <P Name="UpperLimitStiffnessUnits">N*m/deg</P>
+      <P Name="UpperLimitDamping">10</P>
+      <P Name="UpperLimitDamping_conf">compiletime</P>
+      <P Name="UpperLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="UpperLimitTransitionRegionWidth">0.1</P>
+      <P Name="UpperLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="UpperLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="TorqueActuationMode">ComputedTorque</P>
+      <P Name="MotionActuationMode">InputMotion</P>
+      <P Name="SensePosition">off</P>
+      <P Name="SenseVelocity">off</P>
+      <P Name="SenseAcceleration">off</P>
+      <P Name="SenseTorqueForce">on</P>
+      <P Name="SenseLowerLimitTorqueForce">off</P>
+      <P Name="SenseUpperLimitTorqueForce">off</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="lconn" Index="2">
+        <P Name="PortId">q_in</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+      <Port Type="rconn" Index="2">
+        <P Name="PortId">t_out</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 2" SID="22">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[285, 25, 325, 65]</P>
+    <P Name="ZOrder">31</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Body Elements/Brick Solid</P>
+    <P Name="SourceType">Brick Solid</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_22"/>
+      <P Name="BrickDimensions">[5,72,5]</P>
+      <P Name="BrickDimensions_conf">compiletime</P>
+      <P Name="BrickDimensionsUnits">cm</P>
+      <P Name="ExportEntireGeometry">off</P>
+      <P Name="InertiaType">Custom</P>
+      <P Name="BasedOnType">Density</P>
+      <P Name="Density">1000</P>
+      <P Name="Density_conf">compiletime</P>
+      <P Name="DensityUnits">kg/m^3</P>
+      <P Name="Mass">2</P>
+      <P Name="Mass_conf">compiletime</P>
+      <P Name="MassUnits">kg</P>
+      <P Name="CenterOfMass">[0 0 0]</P>
+      <P Name="CenterOfMass_conf">compiletime</P>
+      <P Name="CenterOfMassUnits">m</P>
+      <P Name="MomentsOfInertia">[1 1 1]</P>
+      <P Name="MomentsOfInertia_conf">compiletime</P>
+      <P Name="MomentsOfInertiaUnits">kg*m^2</P>
+      <P Name="ProductsOfInertia">[0 0 0]</P>
+      <P Name="ProductsOfInertia_conf">compiletime</P>
+      <P Name="ProductsOfInertiaUnits">kg*m^2</P>
+      <P Name="GraphicType">FromGeometry</P>
+      <P Name="MarkerShape">Sphere</P>
+      <P Name="MarkerSize">10</P>
+      <P Name="MarkerSize_conf">compiletime</P>
+      <P Name="GraphicVisPropType">SimpleVisualProperties</P>
+      <P Name="GraphicDiffuseColor">[0.5 0.5 0.5]</P>
+      <P Name="GraphicDiffuseColor_conf">compiletime</P>
+      <P Name="GraphicOpacity">1</P>
+      <P Name="GraphicOpacity_conf">compiletime</P>
+      <P Name="GraphicSpecularColor">[0.5 0.5 0.5 1.0]</P>
+      <P Name="GraphicSpecularColor_conf">compiletime</P>
+      <P Name="GraphicAmbientColor">[0.15 0.15 0.15 1.0]</P>
+      <P Name="GraphicAmbientColor_conf">compiletime</P>
+      <P Name="GraphicEmissiveColor">[0.0 0.0 0.0 1.0]</P>
+      <P Name="GraphicEmissiveColor_conf">compiletime</P>
+      <P Name="GraphicShininess">75</P>
+      <P Name="GraphicShininess_conf">compiletime</P>
+      <P Name="DoExposeReferenceFrame">on</P>
+      <P Name="SerializedFrames">
+&lt;Frames&gt;
+
+  &lt;Frame&gt;
+    &lt;Id&gt;Frame1&lt;/Id&gt;
+    &lt;Value&gt;
+      &lt;Name&gt;F2&lt;/Name&gt;
+      &lt;Origin&gt;
+        &lt;Source&gt;GeometricFeature&lt;/Source&gt;
+        &lt;FeatureName&gt;+x +y -z point&lt;/FeatureName&gt;
+      &lt;/Origin&gt;
+      &lt;PrimaryAxis&gt;
+        &lt;DefinedDirection&gt;+Z&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+Z&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/PrimaryAxis&gt;
+      &lt;SecondaryAxis&gt;
+        &lt;DefinedDirection&gt;+X&lt;/DefinedDirection&gt;
+        &lt;Source&gt;ReferenceFrame&lt;/Source&gt;
+        &lt;SourceDirection&gt;+X&lt;/SourceDirection&gt;
+        &lt;FeatureName&gt;&lt;/FeatureName&gt;
+      &lt;/SecondaryAxis&gt;
+    &lt;/Value&gt;
+  &lt;/Frame&gt;
+
+&lt;/Frames&gt;</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">Frame1</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">R</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 2 Pivot tranform" SID="19">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[465, 185, 505, 225]</P>
+    <P Name="ZOrder">28</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_19"/>
+      <P Name="RotationMethod">StandardAxis</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Y</P>
+      <P Name="RotationAngle">90</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">Cartesian</P>
+      <P Name="TranslationCartesianOffset">[34.5,-12.5,-8]</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">cm</P>
+      <P Name="TranslationStandardAxis">-Y</P>
+      <P Name="TranslationStandardOffset">34.5</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">cm</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 2 end transform" SID="23">
+    <PortCounts lconn="1" rconn="1"/>
+    <P Name="Position">[430, -40, 470, 0]</P>
+    <P Name="ZOrder">32</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/Rigid
+Transform</P>
+    <P Name="SourceType">Rigid
+Transform</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_23"/>
+      <P Name="RotationMethod">None</P>
+      <P Name="FollAlignAxisA">+X</P>
+      <P Name="BaseAlignAxisA">+Y</P>
+      <P Name="FollAlignAxisB">+Y</P>
+      <P Name="BaseAlignAxisB">+Z</P>
+      <P Name="RotationStandardAxis">+Z</P>
+      <P Name="RotationAngle">0</P>
+      <P Name="RotationAngle_conf">compiletime</P>
+      <P Name="RotationAngleUnits">deg</P>
+      <P Name="RotationArbitraryAxis">[0 0 1]</P>
+      <P Name="RotationArbitraryAxis_conf">compiletime</P>
+      <P Name="RotationSequenceAxes">FollowerAxes</P>
+      <P Name="RotationSequence">XYX</P>
+      <P Name="RotationSequenceAngles">[0 0 0]</P>
+      <P Name="RotationSequenceAngles_conf">compiletime</P>
+      <P Name="RotationSequenceAnglesUnits">deg</P>
+      <P Name="RotationMatrix">[1 0 0;0 1 0;0 0 1]</P>
+      <P Name="RotationMatrix_conf">compiletime</P>
+      <P Name="Quaternion">[1 0 0 0]</P>
+      <P Name="Quaternion_conf">compiletime</P>
+      <P Name="TranslationMethod">None</P>
+      <P Name="TranslationCartesianOffset">0</P>
+      <P Name="TranslationCartesianOffset_conf">compiletime</P>
+      <P Name="TranslationCartesianOffsetUnits">m</P>
+      <P Name="TranslationStandardAxis">+Z</P>
+      <P Name="TranslationStandardOffset">0</P>
+      <P Name="TranslationStandardOffset_conf">compiletime</P>
+      <P Name="TranslationStandardOffsetUnits">m</P>
+      <P Name="TranslationROffset">0</P>
+      <P Name="TranslationROffset_conf">compiletime</P>
+      <P Name="TranslationROffsetUnits">m</P>
+      <P Name="TranslationThetaOffset">0</P>
+      <P Name="TranslationThetaOffset_conf">compiletime</P>
+      <P Name="TranslationThetaOffsetUnits">deg</P>
+      <P Name="TranslationZOffset">0</P>
+      <P Name="TranslationZOffset_conf">compiletime</P>
+      <P Name="TranslationZOffsetUnits">m</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Rocker 2 pivot" SID="21">
+    <PortCounts lconn="2" rconn="2"/>
+    <P Name="Position">[580, 50, 620, 90]</P>
+    <P Name="ZOrder">30</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Joints/Revolute Joint</P>
+    <P Name="SourceType">Revolute Joint</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_21"/>
+      <P Name="JointMode">Normal</P>
+      <P Name="CompositeWrenchDir">FollowerOnBase</P>
+      <P Name="CompositeWrenchFrame">BaseFrame</P>
+      <P Name="SenseConstraintForce">off</P>
+      <P Name="SenseConstraintTorque">off</P>
+      <P Name="SenseTotalForce">off</P>
+      <P Name="SenseTotalTorque">off</P>
+      <P Name="PositionTargetSpecify">off</P>
+      <P Name="PositionTargetPriority">High</P>
+      <P Name="PositionTargetValue">0</P>
+      <P Name="PositionTargetValue_conf">compiletime</P>
+      <P Name="PositionTargetValueUnits">deg</P>
+      <P Name="VelocityTargetSpecify">off</P>
+      <P Name="VelocityTargetPriority">High</P>
+      <P Name="VelocityTargetValue">0</P>
+      <P Name="VelocityTargetValue_conf">compiletime</P>
+      <P Name="VelocityTargetValueUnits">deg/s</P>
+      <P Name="EquilibriumPosition">0</P>
+      <P Name="EquilibriumPosition_conf">compiletime</P>
+      <P Name="EquilibriumPositionUnits">deg</P>
+      <P Name="SpringStiffness">0</P>
+      <P Name="SpringStiffness_conf">compiletime</P>
+      <P Name="SpringStiffnessUnits">N*m/deg</P>
+      <P Name="DampingCoefficient">0</P>
+      <P Name="DampingCoefficient_conf">compiletime</P>
+      <P Name="DampingCoefficientUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitSpecify">off</P>
+      <P Name="LowerLimitBound">-90</P>
+      <P Name="LowerLimitBound_conf">compiletime</P>
+      <P Name="LowerLimitBoundUnits">deg</P>
+      <P Name="LowerLimitStiffness">1e4</P>
+      <P Name="LowerLimitStiffness_conf">compiletime</P>
+      <P Name="LowerLimitStiffnessUnits">N*m/deg</P>
+      <P Name="LowerLimitDamping">10</P>
+      <P Name="LowerLimitDamping_conf">compiletime</P>
+      <P Name="LowerLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="LowerLimitTransitionRegionWidth">0.1</P>
+      <P Name="LowerLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="LowerLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="UpperLimitSpecify">off</P>
+      <P Name="UpperLimitBound">90</P>
+      <P Name="UpperLimitBound_conf">compiletime</P>
+      <P Name="UpperLimitBoundUnits">deg</P>
+      <P Name="UpperLimitStiffness">1e4</P>
+      <P Name="UpperLimitStiffness_conf">compiletime</P>
+      <P Name="UpperLimitStiffnessUnits">N*m/deg</P>
+      <P Name="UpperLimitDamping">10</P>
+      <P Name="UpperLimitDamping_conf">compiletime</P>
+      <P Name="UpperLimitDampingUnits">N*m/(deg/s)</P>
+      <P Name="UpperLimitTransitionRegionWidth">0.1</P>
+      <P Name="UpperLimitTransitionRegionWidth_conf">compiletime</P>
+      <P Name="UpperLimitTransitionRegionWidthUnits">deg</P>
+      <P Name="TorqueActuationMode">ComputedTorque</P>
+      <P Name="MotionActuationMode">InputMotion</P>
+      <P Name="SensePosition">off</P>
+      <P Name="SenseVelocity">off</P>
+      <P Name="SenseAcceleration">off</P>
+      <P Name="SenseTorqueForce">on</P>
+      <P Name="SenseLowerLimitTorqueForce">off</P>
+      <P Name="SenseUpperLimitTorqueForce">off</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="lconn" Index="2">
+        <P Name="PortId">q_in</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+      <Port Type="rconn" Index="2">
+        <P Name="PortId">t_out</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Scope" Name="Scope" SID="17">
+    <PortCounts in="1"/>
+    <P Name="Position">[1055, 254, 1085, 286]</P>
+    <P Name="ZOrder">26</P>
+    <P Name="GraphicalSettings">{&quot;AxesScalingProperties&quot;:{&quot;AlignXAxis&quot;:&quot;Center&quot;,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;AxesScalingNumUpdates&quot;:10,&quot;ExpandOnly&quot;:true,&quot;ScaleAxesLimitsAtStop&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;YAxisDataRange&quot;:80},&quot;DisplayProperties&quot;:{&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;],&quot;DisplayContentCache&quot;:{&quot;LinePropertiesCache&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;Title&quot;:&quot;&quot;,&quot;UserDefinedChannelNames&quot;:{}},&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:0.09800692177863643,&quot;MaxYLimReal&quot;:82.710308764842623,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-22.339470809046833,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;SerializedDisplays&quot;:[{&quot;LinePropertiesCache&quot;:{},&quot;MaxYLimMag&quot;:0.09800692177863643,&quot;MaxYLimReal&quot;:82.710308764842623,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-22.339470809046833,&quot;NumLines&quot;:1,&quot;Placement&quot;:0,&quot;PlotAsMagnitudePhase&quot;:false,&quot;PlotMagPhase&quot;:0,&quot;ShowContent&quot;:1,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;UserDefinedChannelNames&quot;:{},&quot;YLabel&quot;:&quot;&quot;}]},&quot;MeasurementChannel&quot;:0,&quot;Style&quot;:{&quot;AxesColor&quot;:[0.070588235294117646,0.070588235294117646,0.070588235294117646],&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;BarWidth&quot;:[0.9],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;PS-Simulink Converter&quot;],&quot;FontSize&quot;:8.5,&quot;LabelsColor&quot;:[0.85098039215686272,0.85098039215686272,0.85098039215686272],&quot;LineCache&quot;:null,&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineEdgeAlpha&quot;:[1],&quot;LineFaceAlpha&quot;:[1],&quot;LineLabels&quot;:[&quot;PS-Simulink Converter&quot;],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineTrueColor&quot;:[[1,0.90980392156862744,0.39215686274509803]],&quot;LineWidth&quot;:[1.5],&quot;Marker&quot;:[&quot;none&quot;],&quot;MinimizeControls&quot;:false,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;PlotType&quot;:&quot;Auto&quot;,&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true]}}</P>
+    <P Name="WindowPosition">[1.000000,49.000000,1536.000000,889.000000,]</P>
+    <P Name="ScopeFrameLocation">window</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:0.09800692177863643,&quot;MaxYLimReal&quot;:44.581594737974,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-13.914053300072313,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-13.914053300072313</P>
+    <P Name="ActiveDisplayYMaximum">44.581594737974</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope1" SID="18">
+    <PortCounts in="1"/>
+    <P Name="Position">[1055, 309, 1085, 341]</P>
+    <P Name="ZOrder">27</P>
+    <P Name="GraphicalSettings">{&quot;Style&quot;:{&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;AxesColor&quot;:[0.07058823529411765,0.07058823529411765,0.07058823529411765],&quot;LabelsColor&quot;:[0.8509803921568627,0.8509803921568627,0.8509803921568627],&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineWidth&quot;:[1.5],&quot;BarWidth&quot;:[0.9],&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineFaceAlpha&quot;:[1],&quot;LineEdgeAlpha&quot;:[1],&quot;Marker&quot;:[&quot;none&quot;],&quot;FontSize&quot;:8.5,&quot;LineTrueColor&quot;:[[1,0.9098039215686274,0.39215686274509803]],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;PS-Simulink Converter1&quot;],&quot;PlotType&quot;:&quot;Auto&quot;,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;LineLabels&quot;:[&quot;PS-Simulink Converter1&quot;],&quot;MinimizeControls&quot;:false,&quot;LineCache&quot;:null},&quot;MeasurementChannel&quot;:0,&quot;AxesScalingProperties&quot;:{&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;ExpandOnly&quot;:true,&quot;AxesScalingNumUpdates&quot;:10,&quot;ScaleAxesLimitsAtStop&quot;:true,&quot;YAxisDataRange&quot;:80,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;AlignXAxis&quot;:&quot;Center&quot;},&quot;DisplayProperties&quot;:{&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:1,&quot;MaxYLimReal&quot;:1,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;DisplayContentCache&quot;:{&quot;Title&quot;:&quot;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0},&quot;SerializedDisplays&quot;:[{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:1,&quot;MaxYLimReal&quot;:1,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:0}],&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;]}}</P>
+    <P Name="WindowPosition">[488.000000,270.000000,560.000000,413.000000,]</P>
+    <P Name="ScopeFrameLocation">window</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:1,&quot;MaxYLimReal&quot;:1,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-1</P>
+    <P Name="ActiveDisplayYMaximum">1</P>
+    <P Name="DataLoggingVariableName">ScopeData1</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope2" SID="33">
+    <PortCounts in="1"/>
+    <P Name="Position">[765, -26, 795, 6]</P>
+    <P Name="ZOrder">42</P>
+    <P Name="GraphicalSettings">{&quot;AxesScalingProperties&quot;:{&quot;AlignXAxis&quot;:&quot;Center&quot;,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;AxesScalingNumUpdates&quot;:10,&quot;ExpandOnly&quot;:true,&quot;ScaleAxesLimitsAtStop&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;YAxisDataRange&quot;:80},&quot;DisplayProperties&quot;:{&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;],&quot;DisplayContentCache&quot;:{&quot;LinePropertiesCache&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;Title&quot;:&quot;&quot;,&quot;UserDefinedChannelNames&quot;:{}},&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:10,&quot;MaxYLimReal&quot;:10,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-10,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;SerializedDisplays&quot;:[{&quot;LinePropertiesCache&quot;:{},&quot;MaxYLimMag&quot;:10,&quot;MaxYLimReal&quot;:10,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-10,&quot;NumLines&quot;:1,&quot;Placement&quot;:0,&quot;PlotAsMagnitudePhase&quot;:false,&quot;PlotMagPhase&quot;:0,&quot;ShowContent&quot;:1,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;UserDefinedChannelNames&quot;:{},&quot;YLabel&quot;:&quot;&quot;}]},&quot;MeasurementChannel&quot;:0,&quot;Style&quot;:{&quot;AxesColor&quot;:[0.070588235294117646,0.070588235294117646,0.070588235294117646],&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;BarWidth&quot;:[0.9],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;PS-Simulink Converter2&quot;],&quot;FontSize&quot;:8.5,&quot;LabelsColor&quot;:[0.85098039215686272,0.85098039215686272,0.85098039215686272],&quot;LineCache&quot;:null,&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineEdgeAlpha&quot;:[1],&quot;LineFaceAlpha&quot;:[1],&quot;LineLabels&quot;:[&quot;PS-Simulink Converter2&quot;],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineTrueColor&quot;:[[1,0.90980392156862744,0.39215686274509803]],&quot;LineWidth&quot;:[1.5],&quot;Marker&quot;:[&quot;none&quot;],&quot;MinimizeControls&quot;:false,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;PlotType&quot;:&quot;Auto&quot;,&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true]}}</P>
+    <P Name="WindowPosition">[488.000000,270.000000,560.000000,420.000000,]</P>
+    <P Name="ScopeFrameLocation">window</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:2625.3298459546631,&quot;MaxYLimReal&quot;:1523.1067491552076,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-3246.9498924565214,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-3246.9498924565214</P>
+    <P Name="ActiveDisplayYMaximum">1523.1067491552076</P>
+    <P Name="DataLoggingVariableName">ScopeData2</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope3" SID="34">
+    <PortCounts in="1"/>
+    <P Name="Position">[785, 64, 815, 96]</P>
+    <P Name="ZOrder">43</P>
+    <P Name="GraphicalSettings">{&quot;AxesScalingProperties&quot;:{&quot;AlignXAxis&quot;:&quot;Center&quot;,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;AxesScalingNumUpdates&quot;:10,&quot;ExpandOnly&quot;:true,&quot;ScaleAxesLimitsAtStop&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;YAxisDataRange&quot;:80},&quot;DisplayProperties&quot;:{&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;],&quot;DisplayContentCache&quot;:{&quot;LinePropertiesCache&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;Title&quot;:&quot;&quot;,&quot;UserDefinedChannelNames&quot;:{}},&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:10,&quot;MaxYLimReal&quot;:10,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-10,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;SerializedDisplays&quot;:[{&quot;LinePropertiesCache&quot;:{},&quot;MaxYLimMag&quot;:10,&quot;MaxYLimReal&quot;:10,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-10,&quot;NumLines&quot;:1,&quot;Placement&quot;:0,&quot;PlotAsMagnitudePhase&quot;:false,&quot;PlotMagPhase&quot;:0,&quot;ShowContent&quot;:1,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;UserDefinedChannelNames&quot;:{},&quot;YLabel&quot;:&quot;&quot;}]},&quot;MeasurementChannel&quot;:0,&quot;Style&quot;:{&quot;AxesColor&quot;:[0.070588235294117646,0.070588235294117646,0.070588235294117646],&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;BarWidth&quot;:[0.9],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;PS-Simulink Converter3&quot;],&quot;FontSize&quot;:8.5,&quot;LabelsColor&quot;:[0.85098039215686272,0.85098039215686272,0.85098039215686272],&quot;LineCache&quot;:null,&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineEdgeAlpha&quot;:[1],&quot;LineFaceAlpha&quot;:[1],&quot;LineLabels&quot;:[&quot;PS-Simulink Converter3&quot;],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineTrueColor&quot;:[[1,0.90980392156862744,0.39215686274509803]],&quot;LineWidth&quot;:[1.5],&quot;Marker&quot;:[&quot;none&quot;],&quot;MinimizeControls&quot;:false,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;PlotType&quot;:&quot;Auto&quot;,&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true]}}</P>
+    <P Name="WindowPosition">[488.000000,270.000000,560.000000,420.000000,]</P>
+    <P Name="ScopeFrameLocation">window</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:612.582129295385,&quot;MaxYLimReal&quot;:375.18534427811085,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-657.38536754926417,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-657.38536754926417</P>
+    <P Name="ActiveDisplayYMaximum">375.18534427811085</P>
+    <P Name="DataLoggingVariableName">ScopeData3</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope4" SID="35">
+    <PortCounts in="1"/>
+    <P Name="Position">[765, 484, 795, 516]</P>
+    <P Name="ZOrder">44</P>
+    <P Name="GraphicalSettings">{&quot;GraphicalSettings&quot;:{&quot;LegacySettings&quot;:true,&quot;Style&quot;:{&quot;Style&quot;:{&quot;PlotType&quot;:&quot;Auto&quot;}}}}</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="DataLoggingVariableName">ScopeData4</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope5" SID="36">
+    <PortCounts in="1"/>
+    <P Name="Position">[765, 594, 795, 626]</P>
+    <P Name="ZOrder">45</P>
+    <P Name="GraphicalSettings">{&quot;AxesScalingProperties&quot;:{&quot;AlignXAxis&quot;:&quot;Center&quot;,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;AxesScalingNumUpdates&quot;:10,&quot;ExpandOnly&quot;:true,&quot;ScaleAxesLimitsAtStop&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;YAxisDataRange&quot;:80},&quot;DisplayProperties&quot;:{&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;],&quot;DisplayContentCache&quot;:{&quot;LinePropertiesCache&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;Title&quot;:&quot;&quot;,&quot;UserDefinedChannelNames&quot;:{}},&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:10,&quot;MaxYLimReal&quot;:10,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-10,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;SerializedDisplays&quot;:[{&quot;LinePropertiesCache&quot;:{},&quot;MaxYLimMag&quot;:10,&quot;MaxYLimReal&quot;:10,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-10,&quot;NumLines&quot;:1,&quot;Placement&quot;:0,&quot;PlotAsMagnitudePhase&quot;:false,&quot;PlotMagPhase&quot;:0,&quot;ShowContent&quot;:1,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;UserDefinedChannelNames&quot;:{},&quot;YLabel&quot;:&quot;&quot;}]},&quot;MeasurementChannel&quot;:0,&quot;Style&quot;:{&quot;AxesColor&quot;:[0.070588235294117646,0.070588235294117646,0.070588235294117646],&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;BarWidth&quot;:[0.9],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;PS-Simulink Converter5&quot;],&quot;FontSize&quot;:8.5,&quot;LabelsColor&quot;:[0.85098039215686272,0.85098039215686272,0.85098039215686272],&quot;LineCache&quot;:null,&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineEdgeAlpha&quot;:[1],&quot;LineFaceAlpha&quot;:[1],&quot;LineLabels&quot;:[&quot;PS-Simulink Converter5&quot;],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineTrueColor&quot;:[[1,0.90980392156862744,0.39215686274509803]],&quot;LineWidth&quot;:[1.5],&quot;Marker&quot;:[&quot;none&quot;],&quot;MinimizeControls&quot;:false,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;PlotType&quot;:&quot;Auto&quot;,&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true]}}</P>
+    <P Name="WindowPosition">[488.000000,270.000000,560.000000,420.000000,]</P>
+    <P Name="ScopeFrameLocation">window</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:2625.3298459546641,&quot;MaxYLimReal&quot;:1816.9305201847988,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-3191.6289535075152,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-3191.6289535075152</P>
+    <P Name="ActiveDisplayYMaximum">1816.9305201847988</P>
+    <P Name="DataLoggingVariableName">ScopeData5</P>
+  </Block>
+  <Block BlockType="Reference" Name="Simulink-PS&#xA;Converter" SID="7">
+    <PortCounts in="3" rconn="1"/>
+    <P Name="Position">[520, 480, 535, 520]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="SourceType">Simulink-PS
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_input</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="NoiseDistribution">none</P>
+      <P Name="NoiseParameters">[]</P>
+      <P Name="Unit">rad</P>
+      <P Name="AffineConversion">off</P>
+      <P Name="FilteringAndDerivatives">provide</P>
+      <P Name="SimscapeFilterOrder">1</P>
+      <P Name="InputFilterTimeConstant">0.001</P>
+      <P Name="UdotUserProvided">2</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Simulink-PS&#xA;Converter1" SID="42">
+    <PortCounts in="3" rconn="1"/>
+    <P Name="Position">[500, 95, 515, 135]</P>
+    <P Name="ZOrder">50</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="SourceType">Simulink-PS
+Converter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_input</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="NoiseDistribution">none</P>
+      <P Name="NoiseParameters">[]</P>
+      <P Name="Unit">rad</P>
+      <P Name="AffineConversion">off</P>
+      <P Name="FilteringAndDerivatives">provide</P>
+      <P Name="SimscapeFilterOrder">1</P>
+      <P Name="InputFilterTimeConstant">0.001</P>
+      <P Name="UdotUserProvided">2</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Sin" Name="Sine Wave" SID="41">
+    <PortCounts out="1"/>
+    <P Name="Position">[410, 100, 440, 130]</P>
+    <P Name="ZOrder">49</P>
+    <P Name="Frequency">2*3.14*2.6</P>
+    <P Name="SampleTime">0</P>
+  </Block>
+  <Block BlockType="Sin" Name="Sine Wave 1" SID="5">
+    <PortCounts out="1"/>
+    <P Name="Position">[445, 485, 475, 515]</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Frequency">2*3.14*2.6</P>
+    <P Name="Phase">3.14</P>
+    <P Name="SampleTime">0</P>
+  </Block>
+  <Block BlockType="Reference" Name="Solver&#xA;Configuration" SID="10">
+    <PortCounts rconn="1"/>
+    <P Name="Position">[185, 239, 230, 271]</P>
+    <P Name="ZOrder">19</P>
+    <P Name="LibraryVersion">11.0</P>
+    <P Name="SourceBlock">nesl_utility/Solver
+Configuration</P>
+    <P Name="SourceType">Solver
+Configuration</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">solver</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">generic</P>
+      <P Name="Tones">[]</P>
+      <P Name="Harmonics">[]</P>
+      <P Name="SimulateNoise">off</P>
+      <P Name="Profile">off</P>
+      <P Name="UseLocalSampling">off</P>
+      <P Name="EnableSwitchedLinearOptims">on</P>
+      <P Name="FrequencyDomain">off</P>
+      <P Name="UseCCode">off</P>
+      <P Name="RelTol">0.001</P>
+      <P Name="AbsTol">0.001</P>
+      <P Name="MinStep">1e-09</P>
+      <P Name="ToWorkspace">off</P>
+      <P Name="RevertToSquareIcSolve">off</P>
+      <P Name="NumHomotopyIterations">100</P>
+      <P Name="PhasorMode">off</P>
+      <P Name="PhasorModeNumHarmonics">1</P>
+      <P Name="ConsistencySolver">NEWTON_XTOL_AFTER_FTOL</P>
+      <P Name="CanonicalOrdering">CANONICAL</P>
+      <P Name="OptimizeIntermediates">OPTIMIZED</P>
+      <P Name="IndexReductionMethod">DerivativeReplacement</P>
+      <P Name="DoDC">off</P>
+      <P Name="ResidualTolerance">1e-09</P>
+      <P Name="ConsistencyTolSource">GLOBAL</P>
+      <P Name="ConsistencyAbsTol">0.001</P>
+      <P Name="ConsistencyRelTol">0.001</P>
+      <P Name="ConsistencyTolFactor">0.001</P>
+      <P Name="UseLocalSolver">off</P>
+      <P Name="LocalSolverChoice">NE_BACKWARD_EULER_ADVANCER</P>
+      <P Name="ResolveIndetEquations">on</P>
+      <P Name="FunctionEvalNumThread">1</P>
+      <P Name="LocalSolverSampleTime">0.001</P>
+      <P Name="DoFixedCost">off</P>
+      <P Name="MaxNonlinIter">3</P>
+      <P Name="MaxModeIter">2</P>
+      <P Name="ComputeImpulses">off</P>
+      <P Name="ImpulseIterations">2</P>
+      <P Name="LinearAlgebra">auto</P>
+      <P Name="LinearAlgebraNumThread">0</P>
+      <P Name="EquationFormulation">NE_TIME_EF</P>
+      <P Name="DelaysMemoryBudget">1024</P>
+      <P Name="AutomaticFiltering">on</P>
+      <P Name="FilteringTimeConstant">0.001</P>
+      <P Name="PartitionStorageMethod">AS_NEEDED</P>
+      <P Name="PartitionMemoryBudget">1024</P>
+      <P Name="PartitionMethod">ROBUST</P>
+      <P Name="MultibodyUseLocalSolver">off</P>
+      <P Name="MultibodyLocalSolverChoice">ODE1</P>
+      <P Name="MultibodyLocalSolverSampleTime">0.001</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Spring 1" SID="3">
+    <PortCounts lconn="1" rconn="2"/>
+    <P Name="Position">[560, 580, 600, 620]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Forces and
+Torques/Spring and
+Damper Force</P>
+    <P Name="SourceType">Spring and
+Damper Force</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_3"/>
+      <P Name="NaturalLength">14</P>
+      <P Name="NaturalLength_conf">compiletime</P>
+      <P Name="NaturalLengthUnits">cm</P>
+      <P Name="SpringStiffness">6800</P>
+      <P Name="SpringStiffness_conf">compiletime</P>
+      <P Name="SpringStiffnessUnits">N/m</P>
+      <P Name="DampingCoefficient">582.8</P>
+      <P Name="DampingCoefficient_conf">compiletime</P>
+      <P Name="DampingCoefficientUnits">N/(m/s)</P>
+      <P Name="SenseForce">on</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+      <Port Type="rconn" Index="2">
+        <P Name="PortId">fm_out</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="Spring 2" SID="24">
+    <PortCounts lconn="1" rconn="2"/>
+    <P Name="Position">[570, -40, 610, 0]</P>
+    <P Name="ZOrder">33</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Forces and
+Torques/Spring and
+Damper Force</P>
+    <P Name="SourceType">Spring and
+Damper Force</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_24"/>
+      <P Name="NaturalLength">14</P>
+      <P Name="NaturalLength_conf">compiletime</P>
+      <P Name="NaturalLengthUnits">cm</P>
+      <P Name="SpringStiffness">6800</P>
+      <P Name="SpringStiffness_conf">compiletime</P>
+      <P Name="SpringStiffnessUnits">N/m</P>
+      <P Name="DampingCoefficient">582.8</P>
+      <P Name="DampingCoefficient_conf">compiletime</P>
+      <P Name="DampingCoefficientUnits">N/(m/s)</P>
+      <P Name="SenseForce">on</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="lconn" Index="1">
+        <P Name="PortId">B</P>
+      </Port>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">F</P>
+      </Port>
+      <Port Type="rconn" Index="2">
+        <P Name="PortId">fm_out</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Reference" Name="World Frame" SID="8">
+    <PortCounts rconn="1"/>
+    <P Name="Position">[180, 345, 220, 385]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="LibraryVersion">26.11</P>
+    <P Name="SourceBlock">sm_lib/Frames and
+Transforms/World Frame</P>
+    <P Name="SourceType">World Frame</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SimscapeInstrumentationLogging">off</P>
+      <P Name="SimscapeInstrumentationVariables" Ref="bdmxdata:SimscapeInstrumentationVariables_8"/>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="rconn" Index="1">
+        <P Name="PortId">W</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Line LineType="Connection">
+    <P Name="ZOrder">3</P>
+    <P Name="Src">9#rconn:1</P>
+    <P Name="Points">[0, 0; 0, -75]</P>
+    <Branch ConnectType="DEST_DEST">
+      <P Name="Points">[242, 365; -7, 0]</P>
+      <Branch ConnectType="SRC_DEST">
+        <P Name="Points">[254, 310; 0, 55; -12, 0]</P>
+        <Branch ConnectType="SRC_DEST">
+          <P Name="Points">[254, 255; 0, 55]</P>
+          <Branch ConnectType="SRC_DEST">
+            <P Name="Src">19#lconn:1</P>
+            <P Name="Points">[-196, 0; 0, 50]</P>
+          </Branch>
+          <Branch ConnectType="SRC_DEST">
+            <P Name="Src">10#rconn:1</P>
+            <P Name="Points">[9, 0]</P>
+          </Branch>
+        </Branch>
+        <Branch ConnectType="SRC_DEST">
+          <P Name="Src">13#lconn:1</P>
+          <P Name="Points">[-196, 0]</P>
+        </Branch>
+      </Branch>
+      <Branch ConnectType="SRC_DEST">
+        <P Name="Src">6#lconn:1</P>
+        <P Name="Points">[-208, 0; 0, -50]</P>
+      </Branch>
+    </Branch>
+    <Branch ConnectType="DEST_SRC">
+      <P Name="Dst">8#rconn:1</P>
+    </Branch>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">8</P>
+    <P Name="Src">25#lconn:1</P>
+    <P Name="Points">[-9, 0; 0, 40]</P>
+    <P Name="Dst">2#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">9</P>
+    <P Name="Src">4#lconn:1</P>
+    <P Name="Points">[-7, 0; 0, -65]</P>
+    <P Name="Dst">6#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">10</P>
+    <P Name="Src">25#rconn:1</P>
+    <P Name="Points">[295, 0]</P>
+    <P Name="Dst">4#rconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">5#out:1</P>
+    <P Name="Points">[18, 0; 0, -15]</P>
+    <P Name="Dst">7#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">19</P>
+    <P Name="Src">2#rconn:1</P>
+    <P Name="Dst">3#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">20</P>
+    <P Name="Src">22#lconn:1</P>
+    <P Name="Points">[-9, 0; 0, -65]</P>
+    <P Name="Dst">23#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">21</P>
+    <P Name="Src">23#rconn:1</P>
+    <P Name="Dst">24#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">27</P>
+    <P Name="Src">21#lconn:1</P>
+    <P Name="Points">[-10, 0; 0, 145]</P>
+    <P Name="Dst">19#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">30</P>
+    <P Name="Src">22#rconn:1</P>
+    <P Name="Points">[295, 0]</P>
+    <P Name="Dst">21#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">31</P>
+    <P Name="Src">11#rconn:1</P>
+    <P Name="Points">[140, 0]</P>
+    <P Name="Dst">14#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">32</P>
+    <P Name="Src">14#lconn:1</P>
+    <P Name="Dst">13#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">53</P>
+    <P Name="Src">14#rconn:3</P>
+    <P Name="Dst">16#lconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">54</P>
+    <P Name="Src">16#out:1</P>
+    <P Name="Dst">18#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">55</P>
+    <P Name="Src">14#rconn:2</P>
+    <P Name="Dst">15#lconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">56</P>
+    <P Name="Src">15#out:1</P>
+    <P Name="Points">[18, 0; 0, -40]</P>
+    <P Name="Dst">17#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">61</P>
+    <P Name="Src">24#rconn:2</P>
+    <P Name="Dst">29#lconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">62</P>
+    <P Name="Src">29#out:1</P>
+    <P Name="Dst">33#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">63</P>
+    <P Name="Src">21#rconn:2</P>
+    <P Name="Dst">30#lconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">64</P>
+    <P Name="Src">30#out:1</P>
+    <P Name="Dst">34#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">66</P>
+    <P Name="Src">4#rconn:2</P>
+    <P Name="Dst">31#lconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">67</P>
+    <P Name="Src">31#out:1</P>
+    <P Name="Dst">35#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">68</P>
+    <P Name="Src">3#rconn:2</P>
+    <P Name="Dst">32#lconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">69</P>
+    <P Name="Src">32#out:1</P>
+    <P Name="Dst">36#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">95</P>
+    <P Name="Src">41#out:1</P>
+    <P Name="Points">[25, 0; 0, -15]</P>
+    <P Name="Dst">42#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">102</P>
+    <P Name="Src">7#rconn:1</P>
+    <P Name="Dst">4#lconn:2</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="FontName">Helvetica</P>
+    <P Name="FontSize">9</P>
+    <P Name="FontWeight">normal</P>
+    <P Name="FontAngle">normal</P>
+    <P Name="ZOrder">107</P>
+    <P Name="Src">55#rconn:1</P>
+    <P Name="Points">[0, -41; -53, 0; 0, -49]</P>
+    <P Name="Dst">59#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">117</P>
+    <P Name="Src">68#lconn:1</P>
+    <P Name="Points">[-35, 0; 0, 60]</P>
+    <Branch ConnectType="DEST_SRC">
+      <P Name="Points">[0, 213; -119, 0; 0, 27]</P>
+      <P Name="Dst">69#lconn:1</P>
+    </Branch>
+    <Branch ConnectType="DEST_SRC">
+      <P Name="Dst">59#rconn:1</P>
+    </Branch>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">118</P>
+    <P Name="Src">68#rconn:1</P>
+    <P Name="Points">[0, -34; -349, 0; 0, -41]</P>
+    <P Name="Dst">57#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">125</P>
+    <P Name="Src">69#rconn:1</P>
+    <P Name="Points">[26, 0; 0, 51; -224, 0; 0, 39]</P>
+    <P Name="Dst">56#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">126</P>
+    <P Name="Src">57#rconn:1</P>
+    <P Name="Points">[5, 0; 0, -35]</P>
+    <P Name="Dst">61#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">127</P>
+    <P Name="Src">56#rconn:1</P>
+    <P Name="Points">[18, 0; 0, 60]</P>
+    <P Name="Dst">60#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">128</P>
+    <P Name="Src">61#rconn:1</P>
+    <P Name="Points">[23, 0; 0, -53; 405, 0; 0, 23]</P>
+    <P Name="Dst">24#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">129</P>
+    <P Name="Src">60#rconn:1</P>
+    <P Name="Points">[71, 0; 0, 96; 442, 0; 0, -66]</P>
+    <P Name="Dst">3#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">133</P>
+    <P Name="Src">42#rconn:1</P>
+    <P Name="Points">[5, 0; 0, -35]</P>
+    <P Name="Dst">21#lconn:2</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">134</P>
+    <P Name="Src">55#lconn:1</P>
+    <P Name="Points">[-9, 0; 0, -31; 318, 0; 0, 16]</P>
+    <P Name="Dst">11#lconn:1</P>
+  </Line>
+</System>

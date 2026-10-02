@@ -1,0 +1,352 @@
+%% kc_sweep_and_compare.m
+% ONE combined script:
+%   PART 0 - calibrate the TPU springs' Natural Length automatically
+%   PART A - full (k,c) grid sweep + pass/fail verification + heatmap
+%   PART B - a smaller set of (k,c) combinations, each plotted side by side
+%
+% NOTE ON THIS VERSION:
+%   Two things in the model were causing every single run to abort,
+%   regardless of k/c:
+%     1. Wheel 1 / wheel 2 had zero rotational constraint from anything
+%        (Spring and Damper Force blocks only push/pull along a line,
+%        they never apply torque) -- fixed by adding a Weld Joint in
+%        PARALLEL with each existing Spring and Damper Force block (that
+%        block itself is untouched, exactly as you wanted).
+%     2. The TPU springs' Natural Length was a guessed constant (15 cm)
+%        instead of the real assembled gap, so at t=0 the spring saw a
+%        huge, nonphysical stretch/compression and slammed the wheel.
+%        Fixed below by measuring it automatically instead of guessing:
+%        Part 0 runs once with k_tpu=c_tpu=0, lets the (now rigidly
+%        welded) mechanism settle under gravity, and reads the real gap
+%        back from two Transform Sensors (tpu_gap1 / tpu_gap2). That
+%        measured length is then used as L0_tpu1 / L0_tpu2 for every run
+%        in Part A and Part B.
+%
+% REQUIRED in the model before this runs:
+%   1. Both rockers: Motion = Automatically Computed, Torque = None.
+%      (Already correct -- Chassis pivot, Rocker 1 pivot, Rocker 2 pivot.)
+%   2. Each rocker: height-input Prismatic Joint (Motion = Provided by
+%      Input) driving a ground-contact point, TPU spring between that
+%      point and the wheel body, Spring Stiffness = k_tpu, Damping
+%      Coefficient = c_tpu, Natural Length = L0_tpu1 / L0_tpu2 (a
+%      variable, not a number -- see the step-by-step).
+%   3. Spring 1 / Spring 2 (the MAIN struts): Stiffness = k, Damping = c.
+%      (Already correct.)
+%   4. A Weld Joint in parallel with each existing wheel-to-rocker
+%      Spring and Damper Force block, so the wheel can't tumble.
+%   5. A Transform Sensor across each TPU spring (same two frames),
+%      sensing Translation, logged to workspace as tpu_gap1 / tpu_gap2
+%      via To Workspace blocks (Save format = Array).
+%   6. Chassis pivot's Position sensing -> To Workspace block named
+%      link3_angle, Save format = Array. (Already correct -- reports
+%      radians, matching deg2rad(targetAngleDeg) below.)
+%   7. Both Simulink-PS Converter blocks feeding the Prismatic Joints'
+%      position input: filtering already on (1st-order, 1 ms), but the
+%      solver needs 2nd-order to get both derivatives it asks for. This
+%      script sets it for you via set_param -- no GUI edit required, but
+%      if you'd rather it be permanent in the file itself, open each
+%      Simulink-PS Converter's Input Handling tab and set Filter order = 2
+%      by hand, then save the model.
+
+clear;
+clc;
+
+%% ---- USER SETTINGS - edit these ----
+mdl             = 'simulation_actualrover_displacement';  % your model's name
+load_system(mdl);   % load into memory (headless) so set_param below can act on it
+
+% The Prismatic Joints are driven by POSITION (height), but Step + Uniform
+% Random Number is piecewise-constant -- not naturally differentiable. Each
+% Simulink-PS Converter already filters that input (1st-order, 1 ms time
+% constant) to smooth it, but a 1st-order filter only supplies ONE
+% derivative (velocity). The solver needs TWO (velocity AND acceleration)
+% to drive a position-actuated joint -- hence "2 required, 1 provided".
+% Bumping the filter to 2nd-order supplies both. The time constant is far
+% faster than anything of interest here (obstacle at t=1s, noise every
+% 0.05s), so this doesn't meaningfully change the terrain signal itself.
+set_param([mdl '/Simulink-PS Converter'],  'SimscapeFilterOrder', '2');
+set_param([mdl '/Simulink-PS Converter2'], 'SimscapeFilterOrder', '2');
+
+kRange          = [6750, 6850];                % N/m  -- MAIN strut stiffness (swept)
+cRange          = [150, 250];                  % N*s/m -- MAIN strut damping (swept)
+nFull           = 100;                         % grid points per axis for Part A
+nSample         = 3;                           % Part B: nSample x nSample combinations
+
+% ---- Targets ----
+targetAngleDeg   = 5;                          % deg -- max allowable chassis angle
+targetSettleTime = 1;                          % s   -- max allowable settling time
+targetAngle      = deg2rad(targetAngleDeg);    % rad -- what's actually compared
+
+% ---- TPU wheel suspension (fixed material property, NOT swept) ----
+k_tpu = 50000;    % N/m   -- EDIT to your real TPU stiffness
+c_tpu = 500;      % N*s/m -- EDIT to your real TPU damping
+
+% ---- Terrain, as HEIGHT (displacement) -- no force conversion needed ----
+h_obstacle  = 0.190;   % m -- the known 190 mm obstacle event
+h_noise_max = 0.010;   % m -- max small terrain texture (<=10 mm), fed
+                        %      as +/- limits to a Uniform Random Number
+                        %      block with a FIXED seed, so every run
+                        %      sees identical terrain noise.
+
+
+%% ================= PART 0: calibrate TPU natural length =================
+% With k_tpu = c_tpu = 0 the TPU spring applies no force at all, so it
+% can't fight the assembly. The Weld Joints hold each wheel rigidly to
+% its rocker, and the whole mechanism settles to its true resting angle
+% under gravity + the main strut. Whatever gap the Transform Sensors read
+% once it has settled IS the correct Natural Length -- no more guessing.
+
+fprintf('Part 0: calibrating TPU natural length (k_tpu = c_tpu = 0 run)...\n');
+
+inCal = Simulink.SimulationInput(mdl);
+inCal = inCal.setVariable('k', mean(kRange));
+inCal = inCal.setVariable('c', mean(cRange));
+inCal = inCal.setVariable('k_tpu', 0);
+inCal = inCal.setVariable('c_tpu', 0);
+inCal = inCal.setVariable('h_obstacle', 0);     % no obstacle for calibration
+inCal = inCal.setVariable('h_noise_max', 1e-9); % Uniform Random Number needs
+                                                 % Minimum < Maximum strictly --
+                                                 % exactly 0 makes Min==Max==0
+                                                 % and the block rejects that.
+                                                 % 1 nanometer of "noise" is
+                                                 % physically negligible.
+inCal = inCal.setVariable('L0_tpu1', 0);        % placeholder -- irrelevant, spring is off
+inCal = inCal.setVariable('L0_tpu2', 0);
+outCal = sim(inCal);
+
+if ~isempty(outCal.ErrorMessage)
+    error('Calibration run failed: %s\nFix this before running the real sweep.', ...
+        outCal.ErrorMessage);
+end
+
+% Show the raw settling curves -- don't just trust one end-of-run number.
+% If the rocker is swinging wildly instead of settling, you'll see it here.
+figure('Name', 'Calibration - TPU gap settling (raw units, see conversion below)');
+subplot(3,1,1);
+plot(outCal.tout, outCal.tpu_gap1); grid on;
+ylabel('tpu_gap1 (cm)'); title('Rocker 1 / wheel 1 side');
+subplot(3,1,2);
+plot(outCal.tout, outCal.tpu_gap2); grid on;
+ylabel('tpu_gap2 (cm)'); title('Rocker 2 / wheel 2 side');
+subplot(3,1,3);
+plot(outCal.tout, rad2deg(outCal.link3_angle)); grid on;
+xlabel('Time (s)'); ylabel('Chassis angle (deg)'); title('Whole mechanism -- should settle to a modest number');
+
+calAngleDeg = rad2deg(outCal.link3_angle(end));
+fprintf('Chassis angle at end of calibration: %.2f deg\n', calAngleDeg);
+if abs(calAngleDeg) > 90
+    warning(['Chassis swung past 90 deg during calibration -- the mechanism did not ' ...
+        'settle to a normal rest pose (likely swung through a geometry toggle point). ' ...
+        'Check the plot above before trusting L0_tpu1/L0_tpu2, and consider a longer ' ...
+        'calibration StopTime or starting the rocker closer to its real assembled angle.']);
+end
+
+gap1_raw = outCal.tpu_gap1;   % PS-Simulink Converter6/7 currently output in CENTIMETERS
+gap2_raw = outCal.tpu_gap2;   % (their Unit field is set to 'cm', not 'm')
+CM_TO_M  = 0.01;              % convert here; or set Unit = m on both converters and
+                               % delete this conversion -- either is fine, just pick one
+
+if size(gap1_raw, 2) == 3
+    L0_tpu1 = vecnorm(gap1_raw(end, :)) * CM_TO_M;   % settled sample, not the first (still transient)
+else
+    L0_tpu1 = abs(gap1_raw(end)) * CM_TO_M;
+end
+if size(gap2_raw, 2) == 3
+    L0_tpu2 = vecnorm(gap2_raw(end, :)) * CM_TO_M;
+else
+    L0_tpu2 = abs(gap2_raw(end)) * CM_TO_M;
+end
+
+fprintf('Calibrated: L0_tpu1 = %.4f m, L0_tpu2 = %.4f m\n', L0_tpu1, L0_tpu2);
+
+if L0_tpu1 <= 0 || L0_tpu2 <= 0 || L0_tpu1 > 1 || L0_tpu2 > 1
+    warning(['Calibrated natural length looks suspicious (expected roughly ' ...
+        '0.01-0.3 m for this rover). Double-check the Transform Sensor wiring ' ...
+        'and units before trusting Part A/B.']);
+end
+
+
+%% ================= PART A: full grid sweep =================
+
+kVals = linspace(kRange(1), kRange(2), nFull);
+cVals = linspace(cRange(1), cRange(2), nFull);
+fprintf('Part A: sweeping %d k values x %d c values = %d runs...\n', ...
+    nFull, nFull, nFull*nFull);
+fprintf('Terrain input: %.0f mm obstacle step, +/- %.0f mm texture noise\n', ...
+    h_obstacle*1000, h_noise_max*1000);
+
+inFull(nFull*nFull) = Simulink.SimulationInput(mdl);
+idx = 1;
+for i = 1:nFull
+    for j = 1:nFull
+        inFull(idx) = Simulink.SimulationInput(mdl);
+        inFull(idx) = inFull(idx).setVariable('k', kVals(i));
+        inFull(idx) = inFull(idx).setVariable('c', cVals(j));
+        inFull(idx) = inFull(idx).setVariable('k_tpu', k_tpu);
+        inFull(idx) = inFull(idx).setVariable('c_tpu', c_tpu);
+        inFull(idx) = inFull(idx).setVariable('h_obstacle', h_obstacle);
+        inFull(idx) = inFull(idx).setVariable('h_noise_max', h_noise_max);
+        inFull(idx) = inFull(idx).setVariable('L0_tpu1', L0_tpu1);
+        inFull(idx) = inFull(idx).setVariable('L0_tpu2', L0_tpu2);
+        idx = idx + 1;
+    end
+end
+
+outFull = sim(inFull);   % <-- this line must NOT be commented out; every
+                          %     run below reads outFull, so leaving this
+                          %     disabled makes the very next loop fail
+                          %     immediately with "undefined variable outFull"
+
+peakAngleGrid = NaN(nFull, nFull);    % rows = c, cols = k
+settleGrid    = NaN(nFull, nFull);
+idx = 1;
+for i = 1:nFull
+    for j = 1:nFull
+        if ~isempty(outFull(idx).ErrorMessage)
+            warning('Part A Run %d (k=%.1f, c=%.1f) failed: %s', ...
+                idx, kVals(i), cVals(j), outFull(idx).ErrorMessage);
+        else
+            try
+                time  = outFull(idx).tout;
+                angle = outFull(idx).link3_angle;
+                peakAngleGrid(j, i) = max(abs(angle));
+                settleGrid(j, i)    = local_settling_time(time, angle, 0.05);
+            catch ME
+                warning('Part A data extraction failed for run %d: %s', idx, ME.message);
+            end
+        end
+        idx = idx + 1;
+    end
+end
+
+passGrid = (peakAngleGrid <= targetAngle) & (settleGrid <= targetSettleTime);
+fprintf('Part A done. %d of %d valid combinations met BOTH targets (<=%g deg AND <=%g s).\n', ...
+    sum(passGrid(:), 'omitnan'), nFull*nFull, targetAngleDeg, targetSettleTime);
+
+figure('Name', 'Full (k,c) sweep - peak chassis angle');
+imagesc(kVals, cVals, peakAngleGrid);
+set(gca, 'YDir', 'normal'); colorbar;
+xlabel('k (N/m)'); ylabel('c (N\cdot s/m)');
+title(sprintf('Peak chassis angle (rad) -- target = %.1f deg', targetAngleDeg));
+
+figure('Name', 'Full (k,c) sweep - settling time');
+imagesc(kVals, cVals, settleGrid);
+set(gca, 'YDir', 'normal'); colorbar;
+xlabel('k (N/m)'); ylabel('c (N\cdot s/m)');
+title(sprintf('Settling time (s) -- target = %.1f s', targetSettleTime));
+
+figure('Name', 'Full (k,c) sweep - pass/fail (both targets)');
+imagesc(kVals, cVals, double(passGrid));
+set(gca, 'YDir', 'normal'); colorbar;
+xlabel('k (N/m)'); ylabel('c (N\cdot s/m)');
+title('1 = meets both targets, 0 = fails at least one');
+
+
+%% ================= PART B: side-by-side comparison =================
+
+kSample = linspace(kRange(1), kRange(2), nSample);
+cSample = linspace(cRange(1), cRange(2), nSample);
+nCombos = nSample * nSample;
+fprintf('Part B: running %d representative combinations...\n', nCombos);
+
+inSample(nCombos) = Simulink.SimulationInput(mdl);
+idx = 1;
+comboK = zeros(1, nCombos);
+comboC = zeros(1, nCombos);
+for i = 1:nSample
+    for j = 1:nSample
+        inSample(idx) = Simulink.SimulationInput(mdl);
+        inSample(idx) = inSample(idx).setVariable('k', kSample(i));
+        inSample(idx) = inSample(idx).setVariable('c', cSample(j));
+        inSample(idx) = inSample(idx).setVariable('k_tpu', k_tpu);
+        inSample(idx) = inSample(idx).setVariable('c_tpu', c_tpu);
+        inSample(idx) = inSample(idx).setVariable('h_obstacle', h_obstacle);
+        inSample(idx) = inSample(idx).setVariable('h_noise_max', h_noise_max);
+        inSample(idx) = inSample(idx).setVariable('L0_tpu1', L0_tpu1);
+        inSample(idx) = inSample(idx).setVariable('L0_tpu2', L0_tpu2);
+        comboK(idx) = kSample(i);
+        comboC(idx) = cSample(j);
+        idx = idx + 1;
+    end
+end
+outSample = sim(inSample);
+
+figure('Name', 'Chassis position - side by side comparison');
+t = tiledlayout(nSample, nSample, 'TileSpacing', 'compact', 'Padding', 'compact');
+
+peakList   = NaN(1, nCombos);
+settleList = NaN(1, nCombos);
+passList   = false(1, nCombos);
+
+for idx = 1:nCombos
+    nexttile;
+
+    if ~isempty(outSample(idx).ErrorMessage)
+        warning('Part B Run %d failed: %s', idx, outSample(idx).ErrorMessage);
+        title(sprintf('k=%.0f, c=%.0f\n[SIMULATION FAILED]', comboK(idx), comboC(idx)), 'FontSize', 8);
+        continue;
+    end
+
+    try
+        time  = outSample(idx).tout;
+        angle = outSample(idx).link3_angle;
+
+        peakList(idx)   = max(abs(angle));
+        settleList(idx) = local_settling_time(time, angle, 0.05);
+        passList(idx)   = (peakList(idx) <= targetAngle) && (settleList(idx) <= targetSettleTime);
+
+        plot(time, angle, 'LineWidth', 1.2);
+        yline(0, '--k');
+        xline(1, ':r');                                    % obstacle impact moment
+        yline( targetAngle, ':m'); yline(-targetAngle, ':m');  % target band
+        statusStr = "FAIL"; if passList(idx), statusStr = "PASS"; end
+        title(sprintf('k=%.0f, c=%.0f [%s]\npeak=%.3f rad, settle=%.2f s', ...
+            comboK(idx), comboC(idx), statusStr, peakList(idx), settleList(idx)), 'FontSize', 8);
+        xlabel('Time (s)'); ylabel('Angle (rad)');
+    catch ME
+        warning('Part B extraction failed on run %d: %s', idx, ME.message);
+        title(sprintf('k=%.0f, c=%.0f\n[EXTRACTION ERROR]', comboK(idx), comboC(idx)), 'FontSize', 8);
+    end
+end
+title(t, sprintf('Chassis angle after %.0f mm obstacle + %.0f mm terrain noise (magenta = %.1f deg target)', ...
+    h_obstacle*1000, h_noise_max*1000, targetAngleDeg));
+
+validIdx = ~isnan(peakList) & ~isnan(settleList);
+if any(passList)
+    candidates = find(passList);
+    normPeak   = peakList(candidates)   / max(peakList(validIdx));
+    normSettle = settleList(candidates) / max(settleList(validIdx));
+    score      = 0.5*normPeak + 0.5*normSettle;
+    [~, localBest] = min(score);
+    bestIdx = candidates(localBest);
+    fprintf('\nBest PASSING combination of the %d sampled:\n', nCombos);
+elseif any(validIdx)
+    normPeak   = peakList / max(peakList(validIdx));
+    normSettle = settleList / max(settleList(validIdx));
+    score      = Inf(1, nCombos);
+    score(validIdx) = 0.5*normPeak(validIdx) + 0.5*normSettle(validIdx);
+    [~, bestIdx] = min(score);
+    fprintf('\nNone of the %d sampled combinations met both targets -- closest one:\n', nCombos);
+else
+    bestIdx = [];
+    fprintf('\nAll sampled combinations failed to execute or log data.\n');
+end
+
+if ~isempty(bestIdx)
+    fprintf('  k = %.1f N/m, c = %.1f N*s/m\n', comboK(bestIdx), comboC(bestIdx));
+    fprintf('  peak angle = %.4f rad (%.2f deg), settling time = %.2f s\n', ...
+        peakList(bestIdx), rad2deg(peakList(bestIdx)), settleList(bestIdx));
+end
+
+
+%% ================= Local function =================
+function ts = local_settling_time(time, signal, band)
+finalVal = signal(end);
+outsideBand = abs(signal - finalVal) > band * max(abs(signal));
+lastOutside = find(outsideBand, 1, 'last');
+if isempty(lastOutside)
+    ts = 0;
+else
+    ts = time(lastOutside);
+end
+end

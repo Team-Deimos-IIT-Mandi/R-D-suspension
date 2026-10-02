@@ -1,0 +1,201 @@
+{
+    "GraphicalInterface":{
+        "ExternalFileReferences":[
+            {
+                "Path":"$bdroot\/Arm 1 end transformation for spring",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"61",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Arm 2",
+                "Reference":"sm_lib\/Body Elements\/Brick Solid",
+                "SID":"56",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Arm 2 end transform for spring",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"60",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Arm1 ",
+                "Reference":"sm_lib\/Body Elements\/Brick Solid",
+                "SID":"57",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Chassis",
+                "Reference":"sm_lib\/Body Elements\/Brick Solid",
+                "SID":"11",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Chassis Pivot transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"13",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Chassis pivot",
+                "Reference":"sm_lib\/Joints\/Revolute Joint",
+                "SID":"14",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Differential render pivot",
+                "Reference":"sm_lib\/Joints\/Revolute Joint",
+                "SID":"59",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Differential render pivot transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"55",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Mechanism Configuration",
+                "Reference":"sm_lib\/Utilities\/Mechanism\nConfiguration",
+                "SID":"9",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PS-Simulink Converter",
+                "Reference":"nesl_utility\/PS-Simulink\nConverter",
+                "SID":"15",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PS-Simulink Converter1",
+                "Reference":"nesl_utility\/PS-Simulink\nConverter",
+                "SID":"16",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PS-Simulink Converter2",
+                "Reference":"nesl_utility\/PS-Simulink\nConverter",
+                "SID":"29",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PS-Simulink Converter3",
+                "Reference":"nesl_utility\/PS-Simulink\nConverter",
+                "SID":"30",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PS-Simulink Converter4",
+                "Reference":"nesl_utility\/PS-Simulink\nConverter",
+                "SID":"31",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PS-Simulink Converter5",
+                "Reference":"nesl_utility\/PS-Simulink\nConverter",
+                "SID":"32",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Pivot to Arm 1 Transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"68",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Pivot to Arm 2 Transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"69",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 1",
+                "Reference":"sm_lib\/Body Elements\/Brick Solid",
+                "SID":"25",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 1 Pivot transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"6",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 1 end transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"2",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 1 pivot",
+                "Reference":"sm_lib\/Joints\/Revolute Joint",
+                "SID":"4",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 2",
+                "Reference":"sm_lib\/Body Elements\/Brick Solid",
+                "SID":"22",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 2 Pivot tranform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"19",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 2 end transform",
+                "Reference":"sm_lib\/Frames and\nTransforms\/Rigid\nTransform",
+                "SID":"23",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Rocker 2 pivot",
+                "Reference":"sm_lib\/Joints\/Revolute Joint",
+                "SID":"21",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Simulink-PS Converter",
+                "Reference":"nesl_utility\/Simulink-PS\nConverter",
+                "SID":"7",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Simulink-PS Converter1",
+                "Reference":"nesl_utility\/Simulink-PS\nConverter",
+                "SID":"42",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Solver Configuration",
+                "Reference":"nesl_utility\/Solver\nConfiguration",
+                "SID":"10",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Spring 1",
+                "Reference":"sm_lib\/Forces and\nTorques\/Spring and\nDamper Force",
+                "SID":"3",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Spring 2",
+                "Reference":"sm_lib\/Forces and\nTorques\/Spring and\nDamper Force",
+                "SID":"24",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/World Frame",
+                "Reference":"sm_lib\/Frames and\nTransforms\/World Frame",
+                "SID":"8",
+                "Type":"LIBRARY_BLOCK"
+            }
+        ],
+        "PreCompExecutionDomainType":"Unset",
+        "SimulinkSubDomainType":"Simulink",
+        "SolverName":"VariableStepAuto"
+    }
+}
